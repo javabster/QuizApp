@@ -1,5 +1,70 @@
 <resources>
     <string name="app_name">App</string>
+
+    /** homepage strings **/
     <string name="button_start">START</string>
     <string name="button_highscores">HIGH SCORES</string>
+
+    /** other buttons **/
+    <string name="back">BACK TO HOMEPAGE</string>
+    <string name="players1">1 PLAYER</string>
+    <string name="players2">2 PLAYERS</string>
+
+
+    /** question strings **/
+    <string name="q1">QUESTION 1</string>
+    <string name="q2">QUESTION 2</string>
+    <string name="q3">QUESTION 3</string>
+    <string name="q4">QUESTION 4</string>
+    <string name="q5">QUESTION 5</string>
+    <string name="q6">QUESTION 6</string>
+    <string name="q7">QUESTION 7</string>
+    <string name="q8">QUESTION 8</string>
+    <string name="q9">QUESTION 9</string>
+    <string name="q10">QUESTION 10</string>
+
+    /** button answer strings **/
+    <string name="q1a">A:</string>
+    <string name="q1b">B:</string>
+    <string name="q1c">C:</string>
+
+    <string name="q2a">A:</string>
+    <string name="q2b">B:</string>
+    <string name="q2c">C:</string>
+
+    <string name="q3a">A:</string>
+    <string name="q3b">B:</string>
+    <string name="q3c">C:</string>
+
+    <string name="q4a">A:</string>
+    <string name="q4b">B:</string>
+    <string name="q4c">C:</string>
+
+    <string name="q5a">A:</string>
+    <string name="q5b">B:</string>
+    <string name="q5c">C:</string>
+
+    <string name="q6a">A:</string>
+    <string name="q6b">B:</string>
+    <string name="q6c">C:</string>
+
+    <string name="q7a">A:</string>
+    <string name="q7b">B:</string>
+    <string name="q7c">C:</string>
+
+    <string name="q8a">A:</string>
+    <string name="q8b">B:</string>
+    <string name="q8c">C:</string>
+
+    <string name="q9a">A:</string>
+    <string name="q9">B:</string>
+    <string name="q9c">C:</string>
+
+    <string name="q10a">A:</string>
+    <string name="q10b">B:</string>
+    <string name="q10c">C:</string>
+
+
+
+
 </resources>

@@ -5,6 +5,9 @@
     <string name="button_start">START</string>
     <string name="button_highscores">HIGH SCORES</string>
 
+    <string name="enter_name">ENTER NAME</string>
+    <string name="go">GO</string>
+
     /** other buttons **/
     <string name="back">BACK TO HOMEPAGE</string>
     <string name="players1">1 PLAYER</string>
@@ -63,8 +66,9 @@
     <string name="q10a">A:</string>
     <string name="q10b">B:</string>
     <string name="q10c">C:</string>
-
-
+    <string name="title_activity_players">Players</string>
+    <string name="title_activity_high_scores">HighScores</string>
+    <string name="title_activity_name_input">NameInput</string>
 
 
 </resources>

@@ -1,20 +1,18 @@
 package am.app;
 
-import android.content.Intent;
 import android.os.Bundle;
-
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-public class Players extends AppCompatActivity {
+public class RandomQuestion1 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_players);
+        setContentView(R.layout.activity_random_question1);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -26,22 +24,6 @@ public class Players extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-    }
-
-
-    public void Players1(){
-        CreatePlayer.player.setScore(0);
-        Intent intent = new Intent(this, NameInput);
-        startActivity(intent);
-
-    }
-
-    public void Players2(){
-        CreatePlayer.player1.setScore(0);
-        CreatePlayer.player2.setScore(0);
-        Intent intent = new Intent(this, NameInput2Players);
-        startActivity(intent);
     }
 
 }

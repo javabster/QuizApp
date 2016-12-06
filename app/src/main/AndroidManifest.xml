@@ -42,6 +42,19 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="am.app.MainActivity" />
         </activity>
+        <activity
+            android:name=".QuestionMethod"
+            android:label="@string/title_activity_question_method"
+            android:parentActivityName=".NameInput"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="am.app.NameInput" />
+        </activity>
+        <activity
+            android:name=".RandomQuestion1"
+            android:label="@string/title_activity_random_question1"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

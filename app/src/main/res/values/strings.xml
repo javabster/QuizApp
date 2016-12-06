@@ -13,6 +13,9 @@
     <string name="players1">1 PLAYER</string>
     <string name="players2">2 PLAYERS</string>
 
+    <string name="button_RandomQuestions">RANDOM QUESTIONS</string>
+    <string name="button_SelectQuestions">SELECT QUESTIONS</string>
+
 
     /** question strings **/
     <string name="q1">QUESTION 1</string>
@@ -60,7 +63,7 @@
     <string name="q8c">C:</string>
 
     <string name="q9a">A:</string>
-    <string name="q9">B:</string>
+    <string name="q9b">B:</string>
     <string name="q9c">C:</string>
 
     <string name="q10a">A:</string>
@@ -69,6 +72,8 @@
     <string name="title_activity_players">Players</string>
     <string name="title_activity_high_scores">HighScores</string>
     <string name="title_activity_name_input">NameInput</string>
+    <string name="title_activity_question_method">QuestionMethod</string>
+    <string name="title_activity_random_question1">RandomQuestion1</string>
 
 
 </resources>

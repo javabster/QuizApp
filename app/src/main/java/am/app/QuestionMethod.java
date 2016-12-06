@@ -7,20 +7,13 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 
-import java.util.Scanner;
-
-public class NameInput extends AppCompatActivity {
-
-    //private Button GoButton;
-    //private EditText NameInput;
+public class QuestionMethod extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_name_input);
+        setContentView(R.layout.activity_question_method);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -33,30 +26,17 @@ public class NameInput extends AppCompatActivity {
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        //GoButton = (Button) findViewById(R.id.gobutton); //finding button in the other xml file
-        //NameInput = (EditText) findViewById(R.id.enter_name);
-        //GoButton.setOnClickListener(new View.OnClickListener(){ //instructions for what to do when button clicked
-          //  public void onClick(View v){
-            //    CreatePlayer.player.setName(NameInput.getText().toString());
-              //  Intent intent = new Intent(this, SelectQuestion);
-                //startActivity(intent);
-
-         //   }
-        //});
-
-
     }
 
-    private EditText = NameInput;
-
-    public void SelectQuestion(){
-        CreatePlayer.player.setName(NameInput.getText().toString());
-        Intent intent = new Intent(this, QuestionMethod);
+    public void RandomQuestions(){
+        Intent intent = new intent(this, RandomQuestion1);
         startActivity(intent);
+    }
 
-    };
+    public void SelectQuestions(){
 
-
+        Intent intent = new intent(this, SelectQuestion1);
+        startActivity(intent);
+    }
 
 }

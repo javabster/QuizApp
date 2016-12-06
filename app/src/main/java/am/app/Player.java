@@ -1,3 +1,5 @@
+package am.app;
+
 /**
  * Created by abbymitchell on 04/12/2016.
  */
@@ -8,14 +10,16 @@ public class Player {
     public int score;
 
     public Player(){
-        name = Joe;
+        name = "Joe";
         score = 0;
     }
 
-    public Player(theName, theScore){
+    public Player(String theName, int theScore){
         name=theName;
         score=theScore;
     }
+
+
 
     public String getName(){
         return name;
@@ -31,6 +35,14 @@ public class Player {
 
     public void setScore(int newScore){
         score = newScore;
+    }
+
+    public void addScore(int addition){
+        score = score + addition;
+    }
+
+    public void minusScore(int subtraction){
+        score = score - subtraction;
     }
 
 }

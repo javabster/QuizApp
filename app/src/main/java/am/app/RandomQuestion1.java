@@ -6,8 +6,13 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
 
 public class RandomQuestion1 extends AppCompatActivity {
+
+    public String question;
+    public int random;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +29,22 @@ public class RandomQuestion1 extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        question = (TextView) findViewById(R.id.question);
+        random = (int)(Math.random()*10+1);
+
+        while (Questions_Array[random] == null){
+            random = ((int)(Math.random()*10+1));
+        }
+
+        question.setText(Questions_Array[random]);
+        Questions_Array[random] = null;
+
     }
+
+
+
+
+
 
 }

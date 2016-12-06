@@ -1,6 +1,5 @@
 package am.app;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,12 +7,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-public class QuestionMethod extends AppCompatActivity {
+public class SelectQuestions extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_question_method);
+        setContentView(R.layout.activity_select_questions);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -26,17 +25,6 @@ public class QuestionMethod extends AppCompatActivity {
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-    }
-
-    public void RandomQuestions(){
-        Intent intent = new intent(this, RandomQuestion1);
-        startActivity(intent);
-    }
-
-    public void SelectQuestions(){
-
-        Intent intent = new intent(this, SelectQuestions);
-        startActivity(intent);
     }
 
 }

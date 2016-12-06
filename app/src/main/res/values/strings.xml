@@ -74,6 +74,7 @@
     <string name="title_activity_name_input">NameInput</string>
     <string name="title_activity_question_method">QuestionMethod</string>
     <string name="title_activity_random_question1">RandomQuestion1</string>
+    <string name="title_activity_select_questions">SelectQuestions</string>
 
 
 </resources>

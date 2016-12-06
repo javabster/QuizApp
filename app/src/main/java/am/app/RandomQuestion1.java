@@ -32,7 +32,6 @@ public class RandomQuestion1 extends AppCompatActivity {
 
         question = (TextView) findViewById(R.id.question);
         random = (int)(Math.random()*10+1);
-        iozeytksdb=ajegfiqhuz;
 
         while (Questions_Array[random] == null){
             random = ((int)(Math.random()*10+1));

@@ -7,10 +7,21 @@ package am.app;
 public class QuestionRandomiser {
 
     public int number = 0;
-    int[] array = new int[5];
+    int[] array = new int[10];                                                                       //Create an empty array of length 5
 
-    number = (int) (Math.random() * 5) + 1;
+    public void QuestionRandomiser{
 
-    public int[] questionNumbers = int
+        number = (int) (Math.random() * 10);                                                        //Variable is given a random value from 0 to 5
 
+        if (Questions_Array[number] == null){
+
+            number = (int) (Math.random() * 10);
+
+        }
+        else {
+            getQuestion(number);                                                             //The value becomes the index of the QuestionsArray, and gets the question
+            Questions_Array[number] == null;                                                        //Element at the given index becomes null
+        }
+
+    }
 }

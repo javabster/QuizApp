@@ -27,4 +27,14 @@ public class SelectQuestions extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+    /* Go to activity, and create 10 buttons numbered 1-10
+    Player clicks on a button
+    getQuestion(button) which returns Question_Array[button]
+    Use method QuestionRandomiser(button) which makes the question at index button null -
+    - (since it will go to the else part of the statement)
+    Delete button
+    Return to screen with 1 less button */
+
+
+
 }

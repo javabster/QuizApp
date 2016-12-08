@@ -6,10 +6,5 @@ package am.app;
 
 public class getQuestion {
 
-    public int getQuestion(int number){
-
-    return Questions_Array[number];
-
-    }
 
 }

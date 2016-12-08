@@ -30,7 +30,7 @@ public class QuestionsArray {
     public int number = 0;
     int[] array = new int[10];                                                                       //Create an empty array of length 5
 
-    public void QuestionRandomiser{
+    public void QuestionRandomiser (int number){
 
         number = (int) (Math.random() * 10);                                                        //Variable is given a random value from 0 to 5
 

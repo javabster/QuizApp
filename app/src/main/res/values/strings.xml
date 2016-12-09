@@ -16,18 +16,11 @@
     <string name="button_RandomQuestions">RANDOM QUESTIONS</string>
     <string name="button_SelectQuestions">SELECT QUESTIONS</string>
 
+    /** answer clicks **/
+    <string name="submit">SUBMIT</string>
+    <STRING name="skip">SKIP</STRING>
+    <string name="cheat">CHEAT</string>
 
-    /** question strings **/
-    <string name="q1">QUESTION 1</string>
-    <string name="q2">QUESTION 2</string>
-    <string name="q3">QUESTION 3</string>
-    <string name="q4">QUESTION 4</string>
-    <string name="q5">QUESTION 5</string>
-    <string name="q6">QUESTION 6</string>
-    <string name="q7">QUESTION 7</string>
-    <string name="q8">QUESTION 8</string>
-    <string name="q9">QUESTION 9</string>
-    <string name="q10">QUESTION 10</string>
 
     /** button answer strings **/
     <string name="q1a">A:</string>
@@ -75,6 +68,7 @@
     <string name="title_activity_question_method">QuestionMethod</string>
     <string name="title_activity_random_question1">RandomQuestion1</string>
     <string name="title_activity_select_questions">SelectQuestions</string>
+    <string name="title_activity_random_correct">RandomCorrect</string>
 
 
 </resources>

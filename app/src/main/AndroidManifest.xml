@@ -64,6 +64,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="am.app.QuestionMethod" />
         </activity>
+        <activity
+            android:name=".RandomCorrect"
+            android:label="@string/title_activity_random_correct"
+            android:parentActivityName=".HighScores"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="am.app.HighScores" />
+        </activity>
     </application>
 
 </manifest>

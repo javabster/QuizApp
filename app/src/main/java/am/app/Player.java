@@ -8,6 +8,9 @@ public class Player {
 
     public String name;
     public int score;
+    //public Player player = new Player();
+    //public Player player1 = new Player();
+    //public Player player2 = new Player();
 
     public Player(){
         name = "Joe";

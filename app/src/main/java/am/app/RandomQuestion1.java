@@ -48,20 +48,29 @@ public class RandomQuestion1 extends AppCompatActivity {
 
     public void goToCorrect(){                //sends user to page saying they are correct
         CreatePlayer.player.addScore(1);
-        Intent intent = new Intent(this, Q1RandomCorrect);
+        Intent intent = new Intent(this, RandomCorrect);
         startActivity(intent);
 
     }
 
 
 
-    public void goToIncorrect(){} //sends user to page saying they are incorrect
+    public void goToIncorrect() { //sends user to page saying they are incorrect
+        Intent intent = new Intent(this, RandomIncorrect);
+        startActivity(intent);
+    }
 
 
 
-    public void goToQ2{} // if click skip go straight to next question
+    public void goToQ2{           // if click skip go straight to next question
+        Intent intent = new Intent(this, RandomQuestion2);
+        startActivity(intent);
+    }
 
-    public void goToCheat(){} // sends user to cheat page
+    public void goToCheat() {// sends user to cheat page
+        Intent intent = new Intent(this, RandomQuestionCheat1);
+
+    }
 
 
 

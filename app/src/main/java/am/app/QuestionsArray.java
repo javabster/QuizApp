@@ -21,27 +21,27 @@ public class QuestionsArray {
         Questions_Array[9] = "Where in the USA would you find, La Guardia, JFK and Newark airports?";
     }
 
-    public String getQuestion(int number){
+    //public String getQuestion(int number){
 
-        return Questions_Array[number];
+        //return Questions_Array[number];
 
-    }
+   // }
 
-    public int number = 0;
-    int[] array = new int[10];                                                                       //Create an empty array of length 5
+    //public int number = 0;
+    //int[] array = new int[10];                                                                       //Create an empty array of length 5
 
-    public void QuestionRandomiser (int number){
+    //public void QuestionRandomiser (int number){
 
-        number = (int) (Math.random() * 10);                                                        //Variable is given a random value from 0 to 5
+        //number = (int) (Math.random() * 10);                                                        //Variable is given a random value from 0 to 5
 
-        if (Questions_Array[number] == null){
+        //if (Questions_Array[number] == null){
 
-            number = (int) (Math.random() * 10);
+            //number = (int) (Math.random() * 10);
 
-        }
-        else {
-            getQuestion(number);                                                                    //The value becomes the index of the QuestionsArray, and gets the question
-            Questions_Array[number] = null;                                                         //Element at the given index becomes null
+        //}
+        //else {
+            //getQuestion(number);                                                                    //The value becomes the index of the QuestionsArray, and gets the question
+            //Questions_Array[number] = null;                                                         //Element at the given index becomes null
         }
 
     }

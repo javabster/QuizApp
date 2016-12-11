@@ -1,5 +1,6 @@
 package am.app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -25,6 +26,10 @@ public class RandomCorrect extends AppCompatActivity {
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    public void goToNextQuestion(){ //sends user to next randomised question
+        Intent intent = new Intent(this, RandomQuestion1)
     }
 
 }

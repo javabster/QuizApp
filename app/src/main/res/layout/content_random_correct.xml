@@ -13,4 +13,17 @@
     tools:context="am.app.RandomCorrect"
     tools:showIn="@layout/activity_random_correct">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CORRECT!"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NEXT QUESTION"
+        android:OnClick="goToNextQuestion" />
+
 </RelativeLayout>
+
+

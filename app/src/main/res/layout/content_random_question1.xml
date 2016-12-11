@@ -21,10 +21,44 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/"
-        android:OnClick="SelectQuestion"
-        android:id="@+id/gobutton"
+        android:text="CHEAT"
+        android:OnClick="goToCheat"
+        android:layout_marginBottom="38dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/button4"
+        android:layout_toStartOf="@+id/button4">
+        <RadioButton android:id="@+id/Aa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@+id/A"
+            android:OnClick = "onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/Bb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@+id/B"
+            android:OnClick = "onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/Bb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@+id/C"
+            android:OnClick = "onRadioButtonClicked"/>
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SKIP"
+        android:OnClick="goToNextQuestion"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignLeft="@+id/button4"
+        android:layout_alignStart="@+id/button4" />
 
 
 </RelativeLayout>

@@ -33,11 +33,7 @@
         android:layout_centerVertical="true"
         android:layout_toLeftOf="@+id/button4"
         android:layout_toStartOf="@+id/button4">
-        <RadioButton android:id="@+id/Aa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@+id/A"
-            android:OnClick = "onRadioButtonClicked"/>
+
         <RadioButton android:id="@+id/Bb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -55,10 +51,22 @@
         android:layout_height="wrap_content"
         android:text="SKIP"
         android:OnClick="goToNextQuestion"
-        android:layout_marginTop="17dp"
         android:layout_below="@+id/radioGroup"
-        android:layout_alignLeft="@+id/button4"
-        android:layout_alignStart="@+id/button4" />
+        android:layout_alignLeft="@+id/button5"
+        android:layout_alignStart="@+id/button5"
+        android:layout_marginLeft="41dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="14dp" />
+
+    <RadioButton android:id="@+id/Aa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@+id/A"
+        android:OnClick = "onRadioButtonClicked"
+        android:layout_above="@+id/radioGroup"
+        android:layout_toLeftOf="@+id/button6"
+        android:layout_toStartOf="@+id/button6"
+        android:layout_marginBottom="10dp" />
 
 
 </RelativeLayout>

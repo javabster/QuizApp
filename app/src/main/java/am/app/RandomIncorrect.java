@@ -8,12 +8,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-public class RandomCorrect extends AppCompatActivity {
+public class RandomIncorrect extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_random_correct);
+        setContentView(R.layout.activity_random_incorrect);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -25,10 +25,9 @@ public class RandomCorrect extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-    public void goToNextQuestion(){ //sends user to next randomised question
+    public void goToNextQustion(){
         Intent intent = new Intent(this, RandomQuestion1);
         startActivity(intent);
     }

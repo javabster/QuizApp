@@ -21,7 +21,7 @@ public class RandomQuestion1 extends AppCompatActivity {
     public RadioButton Aa;
     public RadioButton Bb;
     public RadioButton Cc;
-    public int random;
+    public static int random;
     public int randomA;
     public int randomB;
     public int randomC;
@@ -48,12 +48,19 @@ public class RandomQuestion1 extends AppCompatActivity {
         question = (TextView) findViewById(R.id.question);
         random = (int)(Math.random()*11);           //generates random number between 0 and 10
 
+        //checks if Questions array is empty (mneaning quiz finished) and if so calls goToScore method
+        if ((Questions_Array[0] == null) && (Questions_Array[1] == null) && (Questions_Array[2] == null) && (Questions_Array[3] == null)
+                && (Questions_Array[4] == null) && (Questions_Array[5] == null) && (Questions_Array[6] == null) && (Questions_Array[7] == null)
+                && (Questions_Array[8] == null) && (Questions_Array[9] == null))
+            gotToScore();
+
+        //checks if array place is filled
         while (Questions_Array[random] == null){
             random = ((int)(Math.random()*11));     //checks if array at random index number
         }
 
-        question.setText(Questions_Array[random]);
-        Questions_Array[random] = null;
+        question.setText(Questions_Array[random]);  //sets activity question to array value of randomly generated number
+        Questions_Array[random] = null;            // once question has been used sets empties that array value
 
 
         //selecting answer to display:
@@ -122,15 +129,22 @@ public class RandomQuestion1 extends AppCompatActivity {
 
 
     public void goToNextQuestion{           // if click skip go straight to next question
-        Intent intent = new Intent(this, RandomQuestion2);
+        Intent intent = new Intent(this, RandomQuestion1);
         startActivity(intent);
     }
 
     public void goToCheat() {// sends user to cheat page
-        Intent intent = new Intent(this, RandomQuestionCheat1);
+        Intent intent = new Intent(this, RandomQuestionCheat);
         startActivity(intent);
 
     }
+
+    public void gotToScore(){
+        Intent intent = new Intent(this, FinalScore);
+        startActivity(intent);
+
+    }
+}
 
 
 

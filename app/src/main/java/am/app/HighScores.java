@@ -25,6 +25,10 @@ public class HighScores extends AppCompatActivity {
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        HighScoreArray.sort((Comparable[]) HighScoreArray.High_Scores);
+
+
     }
 
 }

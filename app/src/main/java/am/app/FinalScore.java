@@ -2,18 +2,22 @@ package am.app;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.IdRes;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
 
-public class RandomCorrect extends AppCompatActivity {
+public class FinalScore extends AppCompatActivity {
+
+    public TextView finalScore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_random_correct);
+        setContentView(R.layout.activity_final_score);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -25,11 +29,14 @@ public class RandomCorrect extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        finalScore = (TextView) findViewById(R.id.finalScore);
+        finalScore.setText(CreatePlayer.player.scoreToString());
+        CreatePlayer.player.scoreToHighScore();
     }
 
-    public void goToNextQuestion(){ //sends user to next randomised question
-        Intent intent = new Intent(this, RandomQuestion1);
+    public void goToHomePage(){
+        Intent intent = new Intent(this, MainActivity);
         startActivity(intent);
     }
 

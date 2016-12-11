@@ -7,13 +7,16 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
 
-public class RandomCorrect extends AppCompatActivity {
+public class RandomQuestionCheat extends AppCompatActivity {
+
+    public TextView answer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_random_correct);
+        setContentView(R.layout.activity_random_question_cheat);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -25,10 +28,13 @@ public class RandomCorrect extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        answer = (TextView) findViewById(R.id.answer);
+        answer.setText("The Answer is: " + AnswerRandomiser.getAnswer(RandomQuestion1.random, 0));
+
     }
 
-    public void goToNextQuestion(){ //sends user to next randomised question
+    public void goToNextQuestion(){
         Intent intent = new Intent(this, RandomQuestion1);
         startActivity(intent);
     }

@@ -8,7 +8,8 @@ public class Player {
 
     public String name;
     public int score;
-    //public Player player = new Player();
+    public int randomPlace;
+    //Player player = new Player();
     //public Player player1 = new Player();
     //public Player player2 = new Player();
 
@@ -46,6 +47,16 @@ public class Player {
 
     public void minusScore(int subtraction){
         score = score - subtraction;
+    }
+
+    public String scoreToString(){
+        return (Integer.toString(score));
+    }
+
+    public void scoreToHighScore(){
+        randomPlace = (int)(Math.random()*11);
+        HighScoreArray.High_Scores[randomPlace] = CreatePlayer.player;
+
     }
 
 }

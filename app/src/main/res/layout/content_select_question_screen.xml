@@ -13,4 +13,61 @@
     tools:context="am.app.SelectQuestionScreen"
     tools:showIn="@layout/activity_select_question_screen">
 
+    <TextView
+        android:text="Question: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:id="@+id/textView3"
+        android:textSize="36sp" />
+
+    <RadioButton
+        android:text="RadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="67dp"
+        android:id="@+id/radioButtonA" />
+
+    <RadioButton
+        android:text="RadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/radioButtonA"
+        android:layout_alignStart="@+id/radioButtonA"
+        android:id="@+id/radioButtonB" />
+
+    <RadioButton
+        android:text="RadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioButtonB"
+        android:layout_alignRight="@+id/radioButtonB"
+        android:layout_alignEnd="@+id/radioButtonB"
+        android:layout_marginTop="48dp"
+        android:id="@+id/radioButtonC" />
+
+    <Button
+        android:text="Cheat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/radioButtonC"
+        android:layout_toStartOf="@+id/radioButtonC"
+        android:layout_marginBottom="25dp"
+        android:id="@+id/CheatButton" />
+
+    <Button
+        android:text="Skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/CheatButton"
+        android:layout_toRightOf="@+id/radioButtonC"
+        android:layout_toEndOf="@+id/radioButtonC"
+        android:id="@+id/SkipButton" />
+
 </RelativeLayout>

@@ -47,7 +47,7 @@
         android:layout_alignLeft="@+id/button5"
         android:layout_alignStart="@+id/button5"
         android:id="@+id/button8"
-        android:onClick="selectQuestion"/>
+        android:onClick="selectQuestion (SelectQuestions)"/>
 
     <Button
         android:text="Question 6"

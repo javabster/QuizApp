@@ -49,44 +49,88 @@ public class SelectQuestions extends AppCompatActivity {
     }
 }
 */
-    /*TextView textview;
+    TextView textview;
     int selector;
     public static int Qnumber;
+    public static int number = 0;
 
-    public void selectQuestion(View view){
+    public void selectQuestion(View view){                                                          //Creates method so that the player can select a question
 
-        textview = (TextView) (findViewById(R.id.button5));
+        Qnumber = (int) contentDescription;
 
+            switch(Qnumber){                                                             //Each button has a content description with an integer value
 
-    }
-}*/
+                case 1:
+                    number = 0;
+                    view.setVisibility(View.GONE);                                                  //Deletes button
+                    Intent intent = new Intent(this, SelectQuestionScreen.class);
+                    startActivity(intent);
+                    break;
 
+                case 2:
+                    number = 1;
+                    view.setVisibility(View.GONE);
+                    Intent intent2 = new Intent(this, SelectQuestionScreen.class);
+                    startActivity(intent2);
+                    break;
 
+                case 3:
+                    number = 2;
+                    view.setVisibility(View.GONE);
+                    Intent intent3 = new Intent(this, SelectQuestionScreen.class);
+                    startActivity(intent3);
+                    break;
 
+                case 4:
+                    number = 3;
+                    view.setVisibility(View.GONE);
+                    Intent intent4 = new Intent(this, SelectQuestionScreen.class);
+                    startActivity(intent4);
+                    break;
 
+                case 5:
+                    number = 4;
+                    view.setVisibility(View.GONE);
+                    Intent intent5 = new Intent(this, SelectQuestionScreen.class);
+                    startActivity(intent5);
+                    break;
 
-    /*public void selectQuestion(View view){                                                      //Creates method so that the player can select a question
+                case 6:
+                    number = 5;
+                    view.setVisibility(View.GONE);
+                    Intent intent6 = new Intent(this, SelectQuestionScreen.class);
+                    startActivity(intent6);
+                    break;
 
-        Qnumber = contentDescription;
+                case 7:
+                    number = 6;
+                    view.setVisibility(View.GONE);
+                    Intent intent7 = new Intent(this, SelectQuestionScreen.class);
+                    startActivity(intent7);
+                    break;
 
-            switch(contentDescription){                                                                 //Each button has a content description with an integer value
+                case 8:
+                    number = 7;
+                    view.setVisibility(View.GONE);
+                    Intent intent8 = new Intent(this, SelectQuestionScreen.class);
+                    startActivity(intent8);
+                    break;
 
-            case 1:
+                case 9:
+                    number = 8;
+                    view.setVisibility(View.GONE);
+                    Intent intent9 = new Intent(this, SelectQuestionScreen.class);
+                    startActivity(intent9);
+                    break;
 
-                Intent intent = new Intent(this, SelectQuestionScreen);                                          //Looks at integer content and picks the question from the array
-                startActivity(intent);
-                view.setVisibility(View.GONE);                                                      //Deletes button
-
-            case 2:
-                view.setVisibility(View.GONE);
-
-            case 3:
-
-                view.setVisibility(View.GONE);
-
-
+                case 10:
+                    number = 9;
+                    view.setVisibility(View.GONE);
+                    Intent intent10 = new Intent(this, SelectQuestionScreen.class);
+                    startActivity(intent10);
+                    break;
         }
 
-    }*/
+    }
 
 }

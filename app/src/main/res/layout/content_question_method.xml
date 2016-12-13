@@ -16,13 +16,18 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_RandomQuestions"
-        android:onClick="RandomQuestions"/>
+        android:text="@string/button_SelectQuestions"
+        android:onClick="SelectQuestions"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="77dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_SelectQuestions"
-        android:onClick="SelectQuestions"/>
+        android:text="@string/button_RandomQuestions"
+        android:onClick="RandomQuestions"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

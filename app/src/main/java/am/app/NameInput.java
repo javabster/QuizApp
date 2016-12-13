@@ -35,7 +35,7 @@ public class NameInput extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //GoButton = (Button) findViewById(R.id.gobutton); //finding button in the other xml file
-        //NameInput = (EditText) findViewById(R.id.enter_name);
+        NameInput = (EditText) findViewById(R.id.enter_name);
         //GoButton.setOnClickListener(new View.OnClickListener(){ //instructions for what to do when button clicked
           //  public void onClick(View v){
             //    CreatePlayer.player.setName(NameInput.getText().toString());
@@ -48,7 +48,7 @@ public class NameInput extends AppCompatActivity {
 
     }
 
-    public void SelectQuestion(View v){
+    public void SelectQuestionMethod(View v){
         CreatePlayer.player.setName(NameInput.getText().toString());
         Intent intent = new Intent(this, QuestionMethod.class);
         startActivity(intent);

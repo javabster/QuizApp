@@ -30,7 +30,7 @@ public class Players extends AppCompatActivity {
     }
 
 
-    public void Players1(){
+    public void Players1(View v){
         CreatePlayer.player.setScore(0);
         Intent intent = new Intent(this, NameInput.class);
         startActivity(intent);

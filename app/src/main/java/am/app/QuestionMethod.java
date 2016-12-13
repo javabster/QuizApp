@@ -28,12 +28,12 @@ public class QuestionMethod extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-    public void RandomQuestions(){
+    public void RandomQuestions(View v){
         Intent intent = new Intent(this, RandomQuestion1.class);
         startActivity(intent);
     }
 
-    public void SelectQuestions(){
+    public void SelectQuestions(View v){
 
         Intent intent = new Intent(this, SelectQuestions.class);
         startActivity(intent);

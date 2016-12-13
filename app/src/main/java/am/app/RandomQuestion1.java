@@ -46,17 +46,20 @@ public class RandomQuestion1 extends AppCompatActivity {
 
         //selecting question to display:
         question = (TextView) findViewById(R.id.question);
-        random = (int)(Math.random()*11);           //generates random number between 0 and 10
+        random = (int)(Math.random()*10);           //generates random number between 0 and 10
 
         //checks if Questions array is empty (mneaning quiz finished) and if so calls goToScore method
         if ((Questions_Array[0] == null) && (Questions_Array[1] == null) && (Questions_Array[2] == null) && (Questions_Array[3] == null)
                 && (Questions_Array[4] == null) && (Questions_Array[5] == null) && (Questions_Array[6] == null) && (Questions_Array[7] == null)
-                && (Questions_Array[8] == null) && (Questions_Array[9] == null))
-            goToScore();
+                && (Questions_Array[8] == null) && (Questions_Array[9] == null)){
+            Intent intent = new Intent(this, FinalScore.class);
+            startActivity(intent);
+        }
+            ;
 
         //checks if array place is filled
         while (Questions_Array[random] == null){
-            random = ((int)(Math.random()*11));     //checks if array at random index number
+            random = ((int)(Math.random()*10));     //checks if array at random index number
         }
 
         question.setText(Questions_Array[random]);  //sets activity question to array value of randomly generated number
@@ -96,39 +99,40 @@ public class RandomQuestion1 extends AppCompatActivity {
         switch(view.getId()) {
             case R.id.Aa:
                 if (checked){
-                    if (randomA == 0)  //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
-                        goToCorrect();
-                    else goToIncorrect();}
+                    if (randomA == 0){  //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be calle
+                        CreatePlayer.player.addScore(1);
+                        Intent intent = new Intent(this, RandomCorrect.class);
+                        startActivity(intent);}
+                    else {Intent intent = new Intent(this, RandomCorrect.class);
+                    startActivity(intent);}}
                 break;
             case R.id.Bb:
-                if (checked){
-                    if (randomB == 0)
-                        goToCorrect();
-                    else goToIncorrect();}
+                if (checked) {
+                    if (randomB == 0) {
+                        CreatePlayer.player.addScore(1);
+                        Intent intent = new Intent(this, RandomCorrect.class);
+                        startActivity(intent);
+                    } else {
+                        Intent intent = new Intent(this, RandomCorrect.class);
+                        startActivity(intent);
+                    }}
                     break;
-            case R.id.Cc:
-                if (checked){
-                    if (randomC == 0)
-                        goToCorrect();
-                    else goToIncorrect();}
-                break;}
+                    case R.id.Cc:
+                        if (checked) {
+                            if (randomC == 0) {
+                                CreatePlayer.player.addScore(1);
+                                Intent intent = new Intent(this, RandomCorrect.class);
+                                startActivity(intent);
+                            } else {
+                                Intent intent = new Intent(this, RandomCorrect.class);
+                                startActivity(intent);
+                            }
+                            break;
+                        }
+                }
 
     }
 
-
-    public void goToCorrect(View v){                //sends user to page saying they are correct
-        CreatePlayer.player.addScore(1);
-        Intent intent = new Intent(this, RandomCorrect.class);
-        startActivity(intent);
-
-    }
-
-
-
-    public void goToIncorrect(View v) { //sends user to page saying they are incorrect
-        Intent intent = new Intent(this, RandomIncorrect.class);
-        startActivity(intent);
-    }
 
 
 
@@ -143,11 +147,7 @@ public class RandomQuestion1 extends AppCompatActivity {
 
     }
 
-    public void goToScore(View v){
-        Intent intent = new Intent(this, FinalScore.class);
-        startActivity(intent);
 
-    }
 }
 
 

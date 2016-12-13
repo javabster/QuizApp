@@ -6,16 +6,13 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.TextView;
 
-public class HighScores extends AppCompatActivity {
-
-    public TextView highscores;
+public class SelectQuestionScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_high_scores);
+        setContentView(R.layout.activity_select_question_screen);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -27,13 +24,6 @@ public class HighScores extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        HighScoreArray.sort((Comparable[]) HighScoreArray.High_Scores);
-        highscores = (TextView) findViewById(R.id.highscores);
-        highscores.setText(HighScoreArray.High_Scores.toString());
-
-
     }
 
 }

@@ -72,6 +72,7 @@
     <string name="title_activity_random_incorrect">RandomIncorrect</string>
     <string name="title_activity_random_question_cheat">RandomQuestionCheat</string>
     <string name="title_activity_final_score">FinalScore</string>
+    <string name="title_activity_select_question_screen">SelectQuestionScreen</string>
 
 
 </resources>

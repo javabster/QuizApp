@@ -84,6 +84,10 @@
         <activity
             android:name=".FinalScore"
             android:label="@string/title_activity_final_score"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SelectQuestionScreen"
+            android:label="@string/title_activity_select_question_screen"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

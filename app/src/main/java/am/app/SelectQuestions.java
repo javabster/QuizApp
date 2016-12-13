@@ -1,5 +1,6 @@
 package am.app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -50,6 +51,7 @@ public class SelectQuestions extends AppCompatActivity {
 */
     TextView textview;
     int selector;
+    public static int Qnumber;
 
     public void selectQuestion(View view){
 
@@ -63,13 +65,17 @@ public class SelectQuestions extends AppCompatActivity {
 
 
 
-    /*public String selectQuestion(View view){                                                      //Creates method so that the player can select a question
+    public String selectQuestion(View view){                                                      //Creates method so that the player can select a question
 
-        switch(contentDescription){                                                                 //Each button has a content description with an integer value
+        Qnumber = contentDescription;
+
+            switch(contentDescription){                                                                 //Each button has a content description with an integer value
 
             case 1:
 
-                return Questions_Array[0];                                                          //Looks at integer content and picks the question from the array
+
+                Intent intent = new Intent(this, SelectQuestionScreen);                                          //Looks at integer content and picks the question from the array
+                startActivity(intent);
                 view.setVisibility(View.GONE);                                                      //Deletes button
 
             case 2:

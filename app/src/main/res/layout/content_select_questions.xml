@@ -23,7 +23,8 @@
         android:layout_marginRight="46dp"
         android:layout_marginEnd="46dp"
         android:id="@+id/button5"
-        android:onClick="selectQuestion"/>
+        android:onClick="selectQuestion"
+        android: android:contentDescription="1"/>
 
     <Button
         android:text="Question 1"

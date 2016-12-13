@@ -53,9 +53,14 @@ public class Player {
         return (Integer.toString(score));
     }
 
-    public void scoreToHighScore(){
+    public void scoreToHighScore(){                    //change to a do while loop maybe????
         randomPlace = (int)(Math.random()*11);
+        if (HighScoreArray.High_Scores[randomPlace] == null)
         HighScoreArray.High_Scores[randomPlace] = CreatePlayer.player;
+        else{
+            randomPlace = (int)(Math.random()*11);
+            HighScoreArray.High_Scores[randomPlace] = CreatePlayer.player;
+        }
 
     }
 

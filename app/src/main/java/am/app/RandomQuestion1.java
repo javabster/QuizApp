@@ -70,10 +70,14 @@ public class RandomQuestion1 extends AppCompatActivity {
 
         B = (TextView) findViewById(R.id.B);
         randomB = ((int)(Math.random()*3));    // generates random number between 0 and 2
+        while (randomB == randomA)
+            randomB = ((int)(Math.random()*3)); // checks 
         B.setText(AnswerRandomiser.getAnswer(random, randomB)); // returns string stored in switch statement in AnswerRandomiser
 
         C = (TextView) findViewById(R.id.C);
-        randomB = ((int)(Math.random()*3));    // generates random number between 0 and 2
+        randomC = ((int)(Math.random()*3));    // generates random number between 0 and 2
+        while (randomC == randomA || randomC == randomB)
+            randomC = ((int)(Math.random()*3));
         C.setText(AnswerRandomiser.getAnswer(random, randomC)); // returns string stored in switch statement in AnswerRandomiser
 
         Aa = (RadioButton) findViewById(R.id.Aa);

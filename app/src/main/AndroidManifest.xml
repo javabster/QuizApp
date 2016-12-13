@@ -88,6 +88,14 @@
         <activity
             android:name=".SelectQuestionScreen"
             android:label="@string/title_activity_select_question_screen"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SelectCorrect"
+            android:label="@string/title_activity_select_correct"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SelectIncorrect"
+            android:label="@string/title_activity_select_incorrect"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

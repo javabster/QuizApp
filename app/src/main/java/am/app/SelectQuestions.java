@@ -129,6 +129,11 @@ public class SelectQuestions extends AppCompatActivity {
                     Intent intent10 = new Intent(this, SelectQuestionScreen.class);
                     startActivity(intent10);
                     break;
+
+                case 11:
+                    Intent intentFinal = new Intent(this, HighScores.class);
+                    startActivity(intentFinal);
+                    break;
         }
 
     }

@@ -39,11 +39,11 @@ public class SelectQuestionScreen extends AppCompatActivity {
     TextView scoreview = (TextView) findViewById(R.id.textView5);
     Button cheatButton = (Button) findViewById(R.id.CheatButton);
     Button skipButton = (Button) findViewById(R.id.SkipButton);
-    RadioButton A = (RadioButton) findViewById(R.id.radiobuttonA);
-    RadioButton B = (RadioButton) findViewById(R.id.radiobuttonB);
-    RadioButton C = (RadioButton) findViewById(R.id.radiobuttonC);
+    RadioButton A = (RadioButton) findViewById(R.id.radioButtonA);
+    RadioButton B = (RadioButton) findViewById(R.id.radioButtonB);
+    RadioButton C = (RadioButton) findViewById(R.id.radioButtonC);
     int randA, randB, randC;
-    public static int=0;
+    //public static int=0;
 
     public void displayQuestion(View view) {
 
@@ -100,7 +100,7 @@ public class SelectQuestionScreen extends AppCompatActivity {
                 else {
                     Intent intentNext = new Intent (this, SelectIncorrect.class);
                     startActivity(intentNext);
-                }
+                }}
 
                 break;
             case R.id.Cc:

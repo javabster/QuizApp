@@ -35,7 +35,7 @@ public class RandomQuestionCheat extends AppCompatActivity {
     }
 
     public void goToNextQuestion(){
-        Intent intent = new Intent(this, RandomQuestion1);
+        Intent intent = new Intent(this, RandomQuestion1.class);
         startActivity(intent);
     }
 

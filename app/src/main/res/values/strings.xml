@@ -18,7 +18,7 @@
 
     /** answer clicks **/
     <string name="submit">SUBMIT</string>
-    <STRING name="skip">SKIP</STRING>
+    <string name="skip">SKIP</string>
     <string name="cheat">CHEAT</string>
 
 

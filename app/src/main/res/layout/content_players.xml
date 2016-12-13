@@ -17,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/players1"
-        android:OnClick="Players1"
+        android:onClick="Players1"
         android:layout_marginBottom="110dp"
         android:elevation="0dp"
         android:layout_above="@+id/button3"
@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/players2"
-        android:OnClick="Players2"
+        android:onClick="Players2"
         android:layout_marginTop="127dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />

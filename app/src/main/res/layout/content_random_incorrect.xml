@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="NEXT QUESTION"
-        android:OnClick="goToNextQuestion"
+        android:onClick="goToNextQuestion"
         android:layout_marginBottom="38dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />

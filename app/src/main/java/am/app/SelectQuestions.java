@@ -49,7 +49,7 @@ public class SelectQuestions extends AppCompatActivity {
     }
 }
 */
-    TextView textview;
+    /*TextView textview;
     int selector;
     public static int Qnumber;
 
@@ -59,13 +59,13 @@ public class SelectQuestions extends AppCompatActivity {
 
 
     }
-}
+}*/
 
 
 
 
 
-    public String selectQuestion(View view){                                                      //Creates method so that the player can select a question
+    /*public void selectQuestion(View view){                                                      //Creates method so that the player can select a question
 
         Qnumber = contentDescription;
 
@@ -73,24 +73,20 @@ public class SelectQuestions extends AppCompatActivity {
 
             case 1:
 
-
                 Intent intent = new Intent(this, SelectQuestionScreen);                                          //Looks at integer content and picks the question from the array
                 startActivity(intent);
                 view.setVisibility(View.GONE);                                                      //Deletes button
 
             case 2:
-
-                return Questions_Array[1];
                 view.setVisibility(View.GONE);
 
             case 3:
 
-                return Questions_Array[2];
                 view.setVisibility(View.GONE);
 
 
         }
 
-    }
+    }*/
 
-}*/
+}

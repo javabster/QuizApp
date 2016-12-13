@@ -29,13 +29,13 @@ public class QuestionMethod extends AppCompatActivity {
     }
 
     public void RandomQuestions(){
-        Intent intent = new intent(this, RandomQuestion1);
+        Intent intent = new Intent(this, RandomQuestion1.class);
         startActivity(intent);
     }
 
     public void SelectQuestions(){
 
-        Intent intent = new intent(this, SelectQuestions);
+        Intent intent = new Intent(this, SelectQuestions.class);
         startActivity(intent);
     }
 

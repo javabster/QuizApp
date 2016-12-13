@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class NameInput extends AppCompatActivity {
 
     //private Button GoButton;
-    //private EditText NameInput;
+    private EditText NameInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,11 +48,9 @@ public class NameInput extends AppCompatActivity {
 
     }
 
-    private EditText = NameInput;
-
-    public void SelectQuestion(){
+    public void SelectQuestion(View v){
         CreatePlayer.player.setName(NameInput.getText().toString());
-        Intent intent = new Intent(this, QuestionMethod);
+        Intent intent = new Intent(this, QuestionMethod.class);
         startActivity(intent);
 
     };

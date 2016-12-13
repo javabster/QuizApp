@@ -36,7 +36,7 @@ public class FinalScore extends AppCompatActivity {
     }
 
     public void goToHomePage(){
-        Intent intent = new Intent(this, MainActivity);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 

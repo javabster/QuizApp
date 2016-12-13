@@ -52,7 +52,7 @@ public class RandomQuestion1 extends AppCompatActivity {
         if ((Questions_Array[0] == null) && (Questions_Array[1] == null) && (Questions_Array[2] == null) && (Questions_Array[3] == null)
                 && (Questions_Array[4] == null) && (Questions_Array[5] == null) && (Questions_Array[6] == null) && (Questions_Array[7] == null)
                 && (Questions_Array[8] == null) && (Questions_Array[9] == null))
-            gotToScore();
+            goToScore();
 
         //checks if array place is filled
         while (Questions_Array[random] == null){
@@ -111,40 +111,40 @@ public class RandomQuestion1 extends AppCompatActivity {
                     if (randomC == 0)
                         goToCorrect();
                     else goToIncorrect();}
-                break;
+                break;}
 
     }
 
 
-    public void goToCorrect(){                //sends user to page saying they are correct
+    public void goToCorrect(View v){                //sends user to page saying they are correct
         CreatePlayer.player.addScore(1);
-        Intent intent = new Intent(this, RandomCorrect);
+        Intent intent = new Intent(this, RandomCorrect.class);
         startActivity(intent);
 
     }
 
 
 
-    public void goToIncorrect() { //sends user to page saying they are incorrect
-        Intent intent = new Intent(this, RandomIncorrect);
+    public void goToIncorrect(View v) { //sends user to page saying they are incorrect
+        Intent intent = new Intent(this, RandomIncorrect.class);
         startActivity(intent);
     }
 
 
 
-    public void goToNextQuestion{           // if click skip go straight to next question
-        Intent intent = new Intent(this, RandomQuestion1);
+    public void goToNextQuestion(View v){           // if click skip go straight to next question
+        Intent intent = new Intent(this, RandomQuestion1.class);
         startActivity(intent);
     }
 
-    public void goToCheat() {// sends user to cheat page
-        Intent intent = new Intent(this, RandomQuestionCheat);
+    public void goToCheat(View v) {// sends user to cheat page
+        Intent intent = new Intent(this, RandomQuestionCheat.class);
         startActivity(intent);
 
     }
 
-    public void gotToScore(){
-        Intent intent = new Intent(this, FinalScore);
+    public void goToScore(View v){
+        Intent intent = new Intent(this, FinalScore.class);
         startActivity(intent);
 
     }
@@ -155,4 +155,4 @@ public class RandomQuestion1 extends AppCompatActivity {
 
 
 
-}
+

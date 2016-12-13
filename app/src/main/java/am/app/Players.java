@@ -32,16 +32,16 @@ public class Players extends AppCompatActivity {
 
     public void Players1(){
         CreatePlayer.player.setScore(0);
-        Intent intent = new Intent(this, NameInput);
+        Intent intent = new Intent(this, NameInput.class);
         startActivity(intent);
 
     }
 
-    public void Players2(){
+    /*public void Players2(){
         CreatePlayer.player1.setScore(0);
         CreatePlayer.player2.setScore(0);
-        Intent intent = new Intent(this, NameInput2Players);
+        Intent intent = new Intent(this, NameInput2Players.class);
         startActivity(intent);
-    }
+    }*/
 
 }

@@ -7,148 +7,152 @@ package am.app;
 public class AnswerRandomiser {
 
 
-    public String getAnswer(int randomnumber, int randomnumberX){
-        switch (randomnumber){
+    public static String getAnswer(int randomnumber, int randomnumberX) {
+        switch (randomnumber) {
             case 0:
-                switch (randomnumberX){
+                switch (randomnumberX) {
                     case 0:
                         return "Blue Whale";
-                         break;
+
                     case 1:
                         return "African Elephant";
-                        break;
+                    //break;
                     case 2:
                         return "Hippopotamus";
-                        break;
+                    //break;
                 }
-                break;
-
+                //break;
             case 1:
-                switch (randomnumberX){
+                switch (randomnumberX) {
                     case 0:
                         return "1989";
-                    break;
+                    //break;
                     case 1:
                         return "1990";
-                    break;
+                    //break;
                     case 2:
                         return "1991";
-                    break;
+                    //break;
                 }
-                break;
+                //break;
 
             case 2:
-                switch (randomnumberX){
+                switch (randomnumberX) {
                     case 0:
                         return "Ottawa";
-                    break;
+                    //break;
                     case 1:
                         return "Toronto";
-                    break;
+                    //break;
                     case 2:
                         return "Vancouver";
-                    break;
+                    //break;
                 }
-                break;
+                //break;
 
             case 3:
-                switch (randomnumberX){
+                switch (randomnumberX) {
                     case 0:
                         return "Vatican City";
-                    break;
+                    //break;
                     case 1:
                         return "Monaco";
-                    break;
+                    //break;
                     case 2:
                         return "Tuvalu";
-                    break;
+                    //break;
                 }
-                break;
+                //break;
 
             case 4:
-                switch (randomnumberX){
+                switch (randomnumberX) {
                     case 0:
                         return "1066";
-                    break;
+                    //break;
                     case 1:
                         return "1312";
-                    break;
+                    //break;
                     case 2:
                         return "1865";
-                    break;
+                    //break;
                 }
-                break;
+                //break;
 
             case 5:
-                switch (randomnumberX){
+                switch (randomnumberX) {
                     case 0:
                         return "carpe diem";
-                    break;
+                    //break;
                     case 1:
                         return "a bene placito";
-                    break;
+                    //break;
                     case 2:
                         return "in harmonia progressio";
-                    break;
+                    //break;
                 }
-                break;
+                //break;
 
             case 6:
-                switch (randomnumberX){
+                switch (randomnumberX) {
                     case 0:
                         return "Homer";
-                    break;
+                    //break;
                     case 1:
                         return "Aristotle";
-                    break;
+                    //break;
                     case 2:
                         return "Ulysses";
-                    break;
+                    //break;
                 }
-                break;
+                //break;
 
             case 7:
-                switch (randomnumberX){
+                switch (randomnumberX) {
                     case 0:
                         return "Dutch";
-                    break;
+                    //break;
                     case 1:
                         return "German";
-                    break;
+                    //break;
                     case 2:
                         return "Danish";
-                    break;
+                    //break;
                 }
-                break;
+                //break;
 
             case 8:
-                switch (randomnumberX){
+                switch (randomnumberX) {
                     case 0:
                         return "Au";
-                    break;
+                    //break;
                     case 1:
                         return "Gd";
-                    break;
+                    //break;
                     case 2:
                         return "Ag";
-                    break;
+                    //break;
                 }
-                break;
+                //break;
 
             case 9:
-                switch (randomnumberX){
+                switch (randomnumberX) {
                     case 0:
                         return "Grey";
-                    break;
+                    //break;
                     case 1:
                         return "Pink";
-                    break;
+                    //break;
                     case 2:
                         return "Blue";
-                    break;
+                    //break;
                 }
-                break;}
-    }
 
-
+                //default: break;
+                //break;}
+                return "blah";
+        }
+     return "blahblah";}
 }
+
+
+

@@ -29,7 +29,7 @@ public class RandomCorrect extends AppCompatActivity {
     }
 
     public void goToNextQuestion(){ //sends user to next randomised question
-        Intent intent = new Intent(this, RandomQuestion1);
+        Intent intent = new Intent(this, RandomQuestion1.class);
         startActivity(intent);
     }
 

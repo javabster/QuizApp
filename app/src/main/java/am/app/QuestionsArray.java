@@ -22,7 +22,30 @@ public class QuestionsArray {
     }
 
     public static String getQuestion(int numberv){
-                return Questions_Array[numberv];
+        switch (numberv){
+            case 0:
+                return "What is the largest mammal on Earth?";
+            case 1:
+                return "In what year did the Berlin Wall fall?";
+            case 2:
+                return "What is the capital of Canada?";
+            case 3:
+                return "What is the smallest country in the world?";
+            case 4:
+                return "When was the battle of Hastings?";
+            case 5:
+                return "What is Latin for seize the day?";
+            case 6:
+                return "Who wrote the Illiad and the Odyssey?";
+            case 7:
+                return "Afrikaans was developed from which European language?";
+            case 8:
+                return "What is the Periodic Table symbol for Gold?";
+            case 9:
+                return "What colour is the Jubilee line on the London Underground?";
+            default: return "blah";
+
+        }
     }
 
         }

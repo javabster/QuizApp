@@ -78,7 +78,7 @@ public class SelectQuestionScreen extends AppCompatActivity {
 
         // Check which radio button was clicked
         switch(view.getId()) {
-            case R.id.Aa:
+            case R.id.radioButtonA:
                 if (checked){
                     if (randA == 0) {  //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
                         CreatePlayer.player.addScore(1);
@@ -92,7 +92,7 @@ public class SelectQuestionScreen extends AppCompatActivity {
                     }
                 break;
 
-            case R.id.Bb:
+            case R.id.radioButtonB:
                 if (checked){
                 if (randB == 0) {  //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
                     CreatePlayer.player.addScore(1);
@@ -105,7 +105,7 @@ public class SelectQuestionScreen extends AppCompatActivity {
                 }}
 
                 break;
-            case R.id.Cc:
+            case R.id.radioButtonC:
                 if (checked){
                 if (randA == 0) {  //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
                     CreatePlayer.player.addScore(1);
@@ -120,6 +120,15 @@ public class SelectQuestionScreen extends AppCompatActivity {
         }
 
 
+    }
+
+    public void goToCheatSelect(View v){
+        Intent intent = new Intent(this, SelectCheat.class);
+        startActivity(intent);
+    }
+
+    public void goToSkipSelect(View v){
+        Intent intent = new Intent(this, SelectQuestions.class);
     }
 
 }

@@ -16,7 +16,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@+id/question"/>
+        android:text="@+id/question"
+        android:id="@+id/textView9" />
 
     <Button
         android:layout_width="wrap_content"
@@ -25,7 +26,8 @@
         android:onClick="goToCheat"
         android:layout_marginBottom="38dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:id="@+id/button19" />
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -63,10 +65,10 @@
         android:text="SKIP"
         android:onClick="goToNextQuestion"
         android:id="@+id/button15"
-        android:layout_marginBottom="32dp"
-        android:layout_above="@+id/button16"
-        android:layout_alignLeft="@+id/button16"
-        android:layout_alignStart="@+id/button16" />
+        android:layout_alignBaseline="@+id/button19"
+        android:layout_alignBottom="@+id/button19"
+        android:layout_toRightOf="@+id/textView9"
+        android:layout_toEndOf="@+id/textView9" />
 
 
 </RelativeLayout>

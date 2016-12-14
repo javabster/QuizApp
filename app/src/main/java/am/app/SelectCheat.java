@@ -9,14 +9,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
-public class RandomQuestionCheat extends AppCompatActivity {
+public class SelectCheat extends AppCompatActivity {
 
     public TextView answer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_random_question_cheat);
+        setContentView(R.layout.activity_select_cheat);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -29,13 +29,14 @@ public class RandomQuestionCheat extends AppCompatActivity {
             }
         });
 
-        answer = (TextView) findViewById(R.id.answer);
-        answer.setText(AnswerRandomiser.getAnswer(RandomQuestion1.random, 0));
+        TextView answer = (TextView) findViewById(R.id.displayanswer);
+        answer.setText(AnswerRandomiser.getAnswer(SelectQuestions.number, 0));
 
     }
 
-    public void goToNextQuestion(){
-        Intent intent = new Intent(this, RandomQuestion1.class);
+
+    public void goToNext(View v){
+        Intent intent = new Intent(this, SelectQuestions.class);
         startActivity(intent);
     }
 

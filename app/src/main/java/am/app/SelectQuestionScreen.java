@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Button;
@@ -15,7 +16,15 @@ import static am.app.QuestionsArray.Questions_Array;
 import static am.app.SelectQuestions.number;
 
 public class SelectQuestionScreen extends AppCompatActivity {
+    private static final String TAG = "SelectQuestionScreen";
 
+    TextView textview;
+    Button cheatButton;
+    Button skipButton;
+    RadioButton A;
+    RadioButton B;
+    RadioButton C;
+    int randA, randB, randC;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,44 +40,37 @@ public class SelectQuestionScreen extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-    }
 
-
-    // Each object on the screen is assigned to a variable which is to be used in the method
-    TextView textview = (TextView) findViewById(R.id.textView3);
-    TextView scoreview = (TextView) findViewById(R.id.textView5);
-    Button cheatButton = (Button) findViewById(R.id.CheatButton);
-    Button skipButton = (Button) findViewById(R.id.SkipButton);
-    RadioButton A = (RadioButton) findViewById(R.id.radioButtonA);
-    RadioButton B = (RadioButton) findViewById(R.id.radioButtonB);
-    RadioButton C = (RadioButton) findViewById(R.id.radioButtonC);
-    int randA, randB, randC;
-    //public static int=0;
-
-    public void displayQuestion(View view) {
-
-        textview.setText(Questions_Array[number]); //displays question 1 after the player has chosen it.
-        scoreview.setText("Score: " + CreatePlayer.player.getScore());
-        randA = (int) Math.random() * 3;
-        randB = (int) Math.random() * 3;
+        Log.d(TAG, "onCreate(Bundle) called");
+        TextView textview = (TextView) findViewById(R.id.textView3);
+        RadioButton A = (RadioButton) findViewById(R.id.radioButtonA);
+        RadioButton B = (RadioButton) findViewById(R.id.radioButtonB);
+        RadioButton C = (RadioButton) findViewById(R.id.radioButtonC);
+        Button cheatButton = (Button) findViewById(R.id.CheatButton);
+        Button skipButton = (Button) findViewById(R.id.SkipButton);
+        textview.setText(QuestionsArray.getQuestion(number)); //displays question 1 after the player has chosen it.
+        randA = (int) (Math.random() * 3);
+        randB = (int) (Math.random() * 3);
 
         //Checks numbers are not the same
         while (randB == randA) {
-            randB = (int) Math.random() * 3;
+            randB = (int) (Math.random() * 3);
         }
-        randC = (int) Math.random() * 3;
+        randC = (int) (Math.random() * 3);
 
         //Checks numbers are not the same
         while (randC == randA || randC == randB) {
-            randC = (int) Math.random() * 3;
+            randC = (int) (Math.random() * 3);
         }
 
         //Assigns the position of each under randomly, so that the position never stays the same
         A.setText(AnswerRandomiser.getAnswer(number, randA));
         B.setText(AnswerRandomiser.getAnswer(number, randB));
         C.setText(AnswerRandomiser.getAnswer(number, randC));
-
     }
+
+
+    // Each object on the screen is assigned to a variable which is to be used in the method
 
     public void onRadioButtonClicked(View view) {
 

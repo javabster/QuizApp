@@ -14,7 +14,7 @@
     tools:showIn="@layout/activity_select_question_screen">
 
     <TextView
-        android:text="Question: "
+        android:text="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -24,6 +24,9 @@
         android:textSize="36sp" />
 
 
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
     <RadioButton
         android:text="RadioButton"
         android:layout_width="wrap_content"
@@ -51,6 +54,7 @@
         android:layout_alignEnd="@+id/radioButtonB"
         android:layout_marginTop="48dp"
         android:id="@+id/radioButtonC" />
+    </RadioGroup>
 
     <Button
         android:text="Cheat"

@@ -21,6 +21,10 @@ public class QuestionsArray {
         Questions_Array[9] = "What colour is the Jubilee line on the London Underground?";
     }
 
+    public static String getQuestion(int numberv){
+                return Questions_Array[numberv];
+    }
+
         }
 
 

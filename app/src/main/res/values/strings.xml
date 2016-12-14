@@ -76,6 +76,9 @@
     <string name="title_activity_select_correct">SelectCorrect</string>
     <string name="title_activity_select_incorrect">SelectIncorrect</string>
     <string name="title_activity_name_input2_players">NameInput2Players</string>
+    <string name="title_activity_question_method2">QuestionMethod2</string>
+    <string name="title_activity_transition_screen">TransitionScreen</string>
+    <string name="title_activity_question_screen2">QuestionScreen2</string>
 
 
 </resources>

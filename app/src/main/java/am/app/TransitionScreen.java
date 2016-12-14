@@ -7,23 +7,17 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.EditText;
+import android.widget.TextView;
 
-public class NameInput2Players extends AppCompatActivity {
-
-    private EditText NameInput1;
-    private EditText NameInput2;
+//Transition class and screen so that the players know whose turn it is
+public class TransitionScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_name_input2_players);
+        setContentView(R.layout.activity_transition_screen);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        NameInput1 = (EditText) findViewById(R.id.Player1Name);
-        NameInput2 = (EditText) findViewById(R.id.Player2Name);
-
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -35,11 +29,22 @@ public class NameInput2Players extends AppCompatActivity {
         });
     }
 
+    TextView textview = (TextView) (findViewById(R.id.textView10));
+    public static int players = 0;
 
-    public void SelectQuestionMethod2(View v) {
-        CreatePlayer.player1.setName(NameInput1.getText().toString());
-        CreatePlayer.player2.setName(NameInput2.getText().toString());
-        Intent intent = new Intent(this, QuestionMethod2.class); //Sends the players to the question method screen
+    public void transitionScreen(View v){
+        //Checks which player it is so that they know whose turn it is
+        if (players % 2 == 0){
+            textview.setText("Player 1");
+            players = players + 1; // adds 1 so that next turn, player 2 will come up on the screen
+        }
+        else{
+            textview.setText("Player2");
+            players = players + 1;
+        }
+        //takes you to the question screen
+        Intent intent = new Intent (this, QuestionScreen2.class);
         startActivity(intent);
     }
+
 }

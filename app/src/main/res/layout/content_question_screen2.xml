@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_question_screen2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="am.app.QuestionScreen2"
+    tools:showIn="@layout/activity_question_screen2">
+
+    <TextView
+        android:text="Question: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:id="@+id/textView3"
+        android:textSize="36sp" />
+
+
+    <RadioButton
+        android:text="RadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="67dp"
+        android:id="@+id/radioButtonA" />
+
+    <RadioButton
+        android:text="RadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/radioButtonA"
+        android:layout_alignStart="@+id/radioButtonA"
+        android:id="@+id/radioButtonB" />
+
+    <RadioButton
+        android:text="RadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioButtonB"
+        android:layout_alignRight="@+id/radioButtonB"
+        android:layout_alignEnd="@+id/radioButtonB"
+        android:layout_marginTop="48dp"
+        android:id="@+id/radioButtonC" />
+
+    <Button
+        android:text="Cheat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/radioButtonC"
+        android:layout_toStartOf="@+id/radioButtonC"
+        android:layout_marginBottom="25dp"
+        android:id="@+id/CheatButton" />
+
+    <Button
+        android:text="Skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/CheatButton"
+        android:layout_toRightOf="@+id/radioButtonC"
+        android:layout_toEndOf="@+id/radioButtonC"
+        android:id="@+id/SkipButton" />
+
+    <TextView
+        android:text="Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:textSize="18sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/SkipButton"
+        android:layout_alignEnd="@+id/SkipButton" />
+
+    </RelativeLayout>

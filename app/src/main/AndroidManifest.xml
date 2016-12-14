@@ -100,6 +100,18 @@
         <activity
             android:name=".NameInput2Players"
             android:label="@string/title_activity_name_input2_players"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".QuestionMethod2"
+            android:label="@string/title_activity_question_method2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TransitionScreen"
+            android:label="@string/title_activity_transition_screen"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".QuestionScreen2"
+            android:label="@string/title_activity_question_screen2"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

@@ -7,11 +7,13 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
 public class FinalScore extends AppCompatActivity {
 
+    private static String TAG = "etc";
     public TextView finalScore;
 
     @Override
@@ -30,12 +32,13 @@ public class FinalScore extends AppCompatActivity {
             }
         });
 
-        finalScore = (TextView) findViewById(R.id.finalScore);
+        Log.d(TAG, "arrived at score screen");
+        finalScore = (TextView) findViewById(R.id.finalscore);
         finalScore.setText(CreatePlayer.player.scoreToString());
-        CreatePlayer.player.scoreToHighScore();
+        //CreatePlayer.player.scoreToHighScore();
     }
 
-    public void goToHomePage(){
+    public void goToHomePage(View v){
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }

@@ -9,15 +9,41 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Button;
 
 import static am.app.QuestionsArray.Questions_Array;
 import static android.R.attr.contentDescription;
+import static android.R.attr.value;
 
 public class SelectQuestions extends AppCompatActivity {
     private static String TAG = "SelectQuestions1";
     public static int number;
+
+    public static boolean question1attempt;
+    public static boolean question2attempt;
+    public static boolean question3attempt;
+    public static boolean question4attempt;
+    public static boolean question5attempt;
+    public static boolean question6attempt;
+    public static boolean question7attempt;
+    public static boolean question8attempt;
+    public static boolean question9attempt;
+    public static boolean question10attempt;
+
+
+    public Button button1;
+    public Button button2;
+    public Button button3;
+    public Button button4;
+    public Button button5;
+    public Button button6;
+    public Button button7;
+    public Button button8;
+    public Button button9;
+    public Button button10;
+    public ViewGroup SelectQuestionLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,86 +61,115 @@ public class SelectQuestions extends AppCompatActivity {
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+        button1 = (Button) findViewById(R.id.button4);
+        button2 = (Button) findViewById(R.id.button5);
+        button3 = (Button) findViewById(R.id.button6);
+        button4 = (Button) findViewById(R.id.button8);
+        button5 = (Button) findViewById(R.id.button9);
+        button6 = (Button) findViewById(R.id.button10);
+        button7 = (Button) findViewById(R.id.button11);
+        button8 = (Button) findViewById(R.id.button12);
+        button9 = (Button) findViewById(R.id.button13);
+        button10 = (Button) findViewById(R.id.button14);
+
+        if (question1attempt == true)
+            button1.setVisibility(View.INVISIBLE);  //if question 1 has already been attempted, deletes button
+
+        if (question2attempt == true)
+            button2.setVisibility(View.INVISIBLE);
+
+        if (question3attempt == true)
+            button3.setVisibility(View.INVISIBLE);
+
+        if (question4attempt == true)
+            button4.setVisibility(View.INVISIBLE);
+
+        if (question5attempt == true)
+            button5.setVisibility(View.INVISIBLE);
+
+        if (question6attempt == true)
+            button6.setVisibility(View.INVISIBLE);
+
+        if (question7attempt == true)
+            button7.setVisibility(View.INVISIBLE);
+
+        if (question8attempt == true)
+            button8.setVisibility(View.INVISIBLE);
+
+        if (question9attempt == true)
+            button9.setVisibility(View.INVISIBLE);
+
+        if (question10attempt == true)
+            button10.setVisibility(View.INVISIBLE);
+
+
+
+
     }
-
-    /* Go to activity, and create 10 buttons numbered 1-10
-    Player clicks on a button
-    getQuestion(button) which returns Question_Array[button]
-    Use method QuestionRandomiser(button) which makes the question at index button null -
-    - (since it will go to the else part of the statement)
-    Delete button
-    Return to screen with 1 less button */
-
-    /*Button button = (Button) findViewById(R.id.button5);
-
-    public void selectQuestion(View view) {
-
-        view.setVisibility(View.GONE);
-    }
-}
-*/
 
 
     public void SelectQuestion1(View v){
         Log.d(TAG, "method called");
         number = 0;
-        //view.setVisibility(View.GONE);                                                  //Deletes button
+        question1attempt=true;
         Intent intent = new Intent(this, SelectQuestionScreen.class);
         startActivity(intent);
     }
 
     public void SelectQuestion2(View v){
         number = 1;
-        //view.setVisibility(View.GONE);                                                  //Deletes button
+        question2attempt=true;
         Intent intent = new Intent(this, SelectQuestionScreen.class);
         startActivity(intent);
     }
 
     public void SelectQuestion3(View v){
         number = 2;
-        //view.setVisibility(View.GONE);                                                  //Deletes button
+        question3attempt=true;
         Intent intent = new Intent(this, SelectQuestionScreen.class);
         startActivity(intent);
     }
     public void SelectQuestion4(View v){
         number = 3;
-        //view.setVisibility(View.GONE);                                                  //Deletes button
+        question4attempt=true;
         Intent intent = new Intent(this, SelectQuestionScreen.class);
         startActivity(intent);
     }
     public void SelectQuestion5(View v){
         number = 4;
-        //view.setVisibility(View.GONE);                                                  //Deletes button
+        question5attempt=true;
         Intent intent = new Intent(this, SelectQuestionScreen.class);
         startActivity(intent);
     }
     public void SelectQuestion6(View v){
         number = 5;
-        //view.setVisibility(View.GONE);                                                  //Deletes button
+        question6attempt=true;
         Intent intent = new Intent(this, SelectQuestionScreen.class);
         startActivity(intent);
     }
     public void SelectQuestion7(View v){
         number = 6;
-        //view.setVisibility(View.GONE);                                                  //Deletes button
+        question7attempt=true;
         Intent intent = new Intent(this, SelectQuestionScreen.class);
         startActivity(intent);
     }
     public void SelectQuestion8(View v){
         number = 7;
-        //view.setVisibility(View.GONE);                                                  //Deletes button
+        question8attempt=true;
         Intent intent = new Intent(this, SelectQuestionScreen.class);
         startActivity(intent);
     }
     public void SelectQuestion9(View v){
         number = 8;
-        //view.setVisibility(View.GONE);                                                  //Deletes button
+        question9attempt=true;
         Intent intent = new Intent(this, SelectQuestionScreen.class);
         startActivity(intent);
     }
     public void SelectQuestion10(View v){
         number = 9;
-        //view.setVisibility(View.GONE);                                                  //Deletes button
+        question10attempt=true;
         Intent intent = new Intent(this, SelectQuestionScreen.class);
         startActivity(intent);
     }

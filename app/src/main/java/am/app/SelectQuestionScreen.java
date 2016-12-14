@@ -19,8 +19,6 @@ public class SelectQuestionScreen extends AppCompatActivity {
     private static final String TAG = "SelectQuestionScreen";
 
     TextView textview;
-    Button cheatButton;
-    Button skipButton;
     RadioButton A;
     RadioButton B;
     RadioButton C;
@@ -46,8 +44,6 @@ public class SelectQuestionScreen extends AppCompatActivity {
         RadioButton A = (RadioButton) findViewById(R.id.radioButtonA);
         RadioButton B = (RadioButton) findViewById(R.id.radioButtonB);
         RadioButton C = (RadioButton) findViewById(R.id.radioButtonC);
-        Button cheatButton = (Button) findViewById(R.id.CheatButton);
-        Button skipButton = (Button) findViewById(R.id.SkipButton);
         textview.setText(QuestionsArray.getQuestion(number)); //displays question 1 after the player has chosen it.
         randA = (int) (Math.random() * 3);
         randB = (int) (Math.random() * 3);
@@ -107,7 +103,7 @@ public class SelectQuestionScreen extends AppCompatActivity {
                 break;
             case R.id.radioButtonC:
                 if (checked){
-                if (randA == 0) {  //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
+                if (randC == 0) {  //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
                     CreatePlayer.player.addScore(1);
                     Intent intentNext = new Intent (this, SelectCorrect.class);
                     startActivity(intentNext);

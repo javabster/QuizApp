@@ -16,17 +16,25 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="END OF QUIZ"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@+id/finalScore"/>
+        android:text="@+id/finalscore"
+        android:id="@+id/finalscore"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="BACK TO HOMEPAGE"
-        android:onClick="goToHomepage"/>
+        android:onClick="goToHomePage"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="107dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="END OF QUIZ! YOUR SCORE IS:"
+        android:layout_marginTop="62dp"
+        android:layout_below="@+id/textView11"
+        android:layout_alignRight="@+id/button7"
+        android:layout_alignEnd="@+id/button7" />
 
 </RelativeLayout>

@@ -48,7 +48,7 @@ public class RandomQuestion1 extends AppCompatActivity {
         question = (TextView) findViewById(R.id.question);
         random = (int)(Math.random()*10);           //generates random number between 0 and 10
 
-        //checks if Questions array is empty (mneaning quiz finished) and if so calls goToScore method
+        //checks if Questions array is empty (meaning quiz finished) and if so calls goToScore method
         if ((Questions_Array[0] == null) && (Questions_Array[1] == null) && (Questions_Array[2] == null) && (Questions_Array[3] == null)
                 && (Questions_Array[4] == null) && (Questions_Array[5] == null) && (Questions_Array[6] == null) && (Questions_Array[7] == null)
                 && (Questions_Array[8] == null) && (Questions_Array[9] == null)){

@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -13,8 +14,8 @@ import android.widget.TextView;
 import static am.app.QuestionsArray.Questions_Array;
 
 public class RandomQuestion1 extends AppCompatActivity {
-
-    public TextView question;
+    private static final String TAG = "check";
+    TextView questionX;
     public TextView A;
     public TextView B;
     public TextView C;
@@ -43,10 +44,7 @@ public class RandomQuestion1 extends AppCompatActivity {
             }
         });
 
-
-        //selecting question to display:
-        question = (TextView) findViewById(R.id.question);
-        random = (int)(Math.random()*10);           //generates random number between 0 and 10
+        Log.d(TAG, "onCreate(Bundle) called");
 
         //checks if Questions array is empty (meaning quiz finished) and if so calls goToScore method
         if ((Questions_Array[0] == null) && (Questions_Array[1] == null) && (Questions_Array[2] == null) && (Questions_Array[3] == null)
@@ -55,15 +53,23 @@ public class RandomQuestion1 extends AppCompatActivity {
             Intent intent = new Intent(this, FinalScore.class);
             startActivity(intent);
         }
-            ;
+        Log.d(TAG, "if statement done");
+
+        random = (int)(Math.random()*10); //generates random number between 0 and 9
+        Log.d(TAG, "random number generated");
 
         //checks if array place is filled
-        while (Questions_Array[random] == null){
+        if (Questions_Array[random] == null){
             random = ((int)(Math.random()*10));     //checks if array at random index number
         }
+        Log.d(TAG, "while loop done");
 
-        question.setText(Questions_Array[random]);  //sets activity question to array value of randomly generated number
-        Questions_Array[random] = null;            // once question has been used sets empties that array value
+        //selecting question to display:
+
+        //CODE THROWING ERRORS:
+        TextView questionX = (TextView) findViewById(R.id.questionY);
+        questionX.setText(QuestionsArray.getQuestion(random));  //sets activity question to array value of randomly generated number
+        //Questions_Array[random] = null;            // once question has been used sets empties that array value
 
 
         //selecting answer to display:

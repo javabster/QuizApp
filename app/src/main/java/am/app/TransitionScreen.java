@@ -39,7 +39,7 @@ public class TransitionScreen extends AppCompatActivity {
             players = players + 1; // adds 1 so that next turn, player 2 will come up on the screen
         }
         else{
-            textview.setText("Player2");
+            textview.setText("Player 2");
             players = players + 1;
         }
         //takes you to the question screen

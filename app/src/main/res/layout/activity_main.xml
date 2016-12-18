@@ -39,4 +39,11 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="80dp" />
 
+        <fragment
+            android:name="am.app.BlankFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fragment1"/>
+
+
 </RelativeLayout>

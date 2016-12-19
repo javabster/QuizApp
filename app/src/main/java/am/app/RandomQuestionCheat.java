@@ -30,12 +30,12 @@ public class RandomQuestionCheat extends AppCompatActivity {
         });
 
         answer = (TextView) findViewById(R.id.answer);
-        answer.setText(AnswerRandomiser.getAnswer(RandomQuestion1.random, 0));
+        answer.setText(AnswerRandomiser.getAnswer(QuestionsOrder.randomNumber, 0));
 
     }
 
     public void goToNextQuestion(){
-        Intent intent = new Intent(this, RandomQuestion1.class);
+        Intent intent = new Intent(this, QuestionsOrder.class);
         startActivity(intent);
     }
 

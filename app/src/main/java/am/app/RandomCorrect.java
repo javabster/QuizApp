@@ -28,9 +28,20 @@ public class RandomCorrect extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-    public void goToNextQuestion(){ //sends user to next randomised question
-        Intent intent = new Intent(this, RandomQuestion1.class);
-        startActivity(intent);
+    public void goToNextQuestion(View view){ //sends user to next randomised question
+
+        if ((QuestionsArray.Questions_Array[0] == "done") && (QuestionsArray.Questions_Array[1] == "done") &&
+                (QuestionsArray.Questions_Array[2] == "done") && (QuestionsArray.Questions_Array[3] == "done")
+                && (QuestionsArray.Questions_Array[4] == "done") && (QuestionsArray.Questions_Array[5] == "done") &&
+                (QuestionsArray.Questions_Array[6] == "done") && (QuestionsArray.Questions_Array[7] == "done")
+                && (QuestionsArray.Questions_Array[8] == "done") && (QuestionsArray.Questions_Array[9] == "done")){
+            Intent intent = new Intent(this, FinalScore.class);
+            startActivity(intent);
+        }
+
+        else{
+            Intent intent = new Intent(this, QuestionsOrder.class);
+            startActivity(intent);}
     }
 
 }

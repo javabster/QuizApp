@@ -100,6 +100,14 @@
         <activity
             android:name=".NameInput2Players"
             android:label="@string/title_activity_name_input2_players"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RandomQuestion"
+            android:label="@string/title_activity_random_question"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".QuestionsOrder"
+            android:label="@string/title_activity_questions_order"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

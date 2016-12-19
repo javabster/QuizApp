@@ -28,7 +28,7 @@ public class QuestionMethod2 extends AppCompatActivity {
     }
 
     public void RandomQuestions(View v){
-        Intent intent = new Intent(this, RandomQuestion1.class);
+        Intent intent = new Intent(this, QuestionsOrder.class);
         startActivity(intent);
     }
 

@@ -35,7 +35,7 @@ public class FinalScore extends AppCompatActivity {
         Log.d(TAG, "arrived at score screen");
         finalScore = (TextView) findViewById(R.id.finalscore);
         finalScore.setText(CreatePlayer.player.scoreToString());
-        //CreatePlayer.player.scoreToHighScore();
+        CreatePlayer.player.scoreToHighScore();
     }
 
     public void goToHomePage(View v){

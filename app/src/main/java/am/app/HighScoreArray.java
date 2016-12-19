@@ -1,11 +1,21 @@
 package am.app;
 
+import java.util.Arrays;
+
 /**
  * Created by abbymitchell on 11/12/2016.
  */
 
 public class HighScoreArray {
-    public static Player[] High_Scores = new Player[10];
+    public static String[] High_Scores = new String[10];
+    //public static String[] HighScoresStrings = new String[High_Scores.length];
+
+
+    /*public static String HighScoresToString() {
+        String[] HighScoresStrings = Arrays.copyOf(High_Scores, High_Scores.length, String[].class);
+        return HighScoresStrings.toString();
+    }*/
+
 
     public static void sort(Comparable[] a){
         for (int index=0; index<a.length -1; index++)

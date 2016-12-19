@@ -54,14 +54,18 @@ public class Player {
     }
 
     public void scoreToHighScore(){                    //change to a do while loop maybe????
-        randomPlace = (int)(Math.random()*11);
+        randomPlace = (int)(Math.random()*10);
         if (HighScoreArray.High_Scores[randomPlace] == null)
-        HighScoreArray.High_Scores[randomPlace] = CreatePlayer.player;
+        HighScoreArray.High_Scores[randomPlace] = CreatePlayer.player.ScoreToString();
         else{
-            randomPlace = (int)(Math.random()*11);
-            HighScoreArray.High_Scores[randomPlace] = CreatePlayer.player;
+            randomPlace = (int)(Math.random()*10);
+            HighScoreArray.High_Scores[randomPlace] = CreatePlayer.player.ScoreToString();
         }
 
+    }
+
+    public String ScoreToString(){
+        return ("Name:" + name + "\t\t\tScore:" + score);
     }
 
 }

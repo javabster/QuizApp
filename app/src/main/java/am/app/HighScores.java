@@ -29,9 +29,13 @@ public class HighScores extends AppCompatActivity {
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        HighScoreArray.sort((Comparable[]) HighScoreArray.High_Scores);
-        highscores = (TextView) findViewById(R.id.highscores);
-        highscores.setText(HighScoreArray.High_Scores.toString());
+        //HighScoreArray.sort((Comparable[]) HighScoreArray.High_Scores);
+        highscores = (TextView) findViewById(R.id.HighScores);
+        //highscores.setText(CreatePlayer.player.highScoreToString());
+        highscores.setText("1  " + HighScoreArray.High_Scores[0] + "\n2:  " + HighScoreArray.High_Scores[1]
+         + "\n3:  " + HighScoreArray.High_Scores[2] + "\n4:  " + HighScoreArray.High_Scores[3] + "\n5:  " + HighScoreArray.High_Scores[4]
+        + "\n6:  " + HighScoreArray.High_Scores[5] + "\n7:  " + HighScoreArray.High_Scores[6] + "\n8:  " + HighScoreArray.High_Scores[7]
+        + "\n9:  " + HighScoreArray.High_Scores[8] +"\n10: " + HighScoreArray.High_Scores[9]);
 
 
     }

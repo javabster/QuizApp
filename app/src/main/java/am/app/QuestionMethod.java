@@ -35,7 +35,7 @@ public class QuestionMethod extends AppCompatActivity {
 
     public void SelectQuestions(View v){
 
-    Intent intent = new Intent(this, QuestionsOrder.class);
+    Intent intent = new Intent(this, SelectQuestions.class);
         startActivity(intent);
     }
 

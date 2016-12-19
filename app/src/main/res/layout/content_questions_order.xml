@@ -85,11 +85,4 @@
         android:layout_toRightOf="@+id/question_order"
         android:layout_toEndOf="@+id/question_order" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="FINISHED -> go to score"
-        android:id="@+id/end_button"
-        android:onClick="goToScore"/>
-
 </RelativeLayout>

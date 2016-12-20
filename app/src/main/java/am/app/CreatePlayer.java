@@ -10,4 +10,7 @@ public class CreatePlayer {
     static Player player1 = new Player();
     static Player player2 = new Player();
 
+    static Player defaultPlayer = new Player();
+    static Player highScorePlayer = new Player();
+
 }

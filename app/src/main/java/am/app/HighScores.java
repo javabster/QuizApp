@@ -8,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.Arrays;
+
 public class HighScores extends AppCompatActivity {
 
     public TextView highscores;
@@ -29,13 +31,21 @@ public class HighScores extends AppCompatActivity {
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //HighScoreArray.sort((Comparable[]) HighScoreArray.High_Scores);
+        Arrays.sort(HighScoreArray.High_Scores);
+        HighScoreArray.arrayToString();
+
         highscores = (TextView) findViewById(R.id.HighScores);
-        //highscores.setText(CreatePlayer.player.highScoreToString());
-        highscores.setText("1  " + HighScoreArray.High_Scores[0] + "\n2:  " + HighScoreArray.High_Scores[1]
-         + "\n3:  " + HighScoreArray.High_Scores[2] + "\n4:  " + HighScoreArray.High_Scores[3] + "\n5:  " + HighScoreArray.High_Scores[4]
-        + "\n6:  " + HighScoreArray.High_Scores[5] + "\n7:  " + HighScoreArray.High_Scores[6] + "\n8:  " + HighScoreArray.High_Scores[7]
-        + "\n9:  " + HighScoreArray.High_Scores[8] +"\n10: " + HighScoreArray.High_Scores[9]);
+        /*highscores.setText("1:  " + HighScoreArray.High_Scores[0] + "\n2:  " + HighScoreArray.High_Scores[1]
+                + "\n3:  " + HighScoreArray.High_Scores[2] + "\n4:  " + HighScoreArray.High_Scores[3] + "\n5:  "
+                + HighScoreArray.High_Scores[4] + "\n6:  " + HighScoreArray.High_Scores[5] + "\n7:  " +
+                HighScoreArray.High_Scores[6] + "\n8:  " + HighScoreArray.High_Scores[7]
+                + "\n9:  " + HighScoreArray.High_Scores[8] +"\n10: " + HighScoreArray.High_Scores[9]);*/
+
+        highscores.setText("1:  " + HighScoreArray.High_Scores_Strings[0] + "\n2:  " + HighScoreArray.High_Scores_Strings[1]
+         + "\n3:  " + HighScoreArray.High_Scores_Strings[2] + "\n4:  " + HighScoreArray.High_Scores_Strings[3] + "\n5:  "
+                + HighScoreArray.High_Scores_Strings[4] + "\n6:  " + HighScoreArray.High_Scores_Strings[5] + "\n7:  " +
+                HighScoreArray.High_Scores_Strings[6] + "\n8:  " + HighScoreArray.High_Scores_Strings[7]
+        + "\n9:  " + HighScoreArray.High_Scores_Strings[8] +"\n10: " + HighScoreArray.High_Scores_Strings[9]);
 
 
     }

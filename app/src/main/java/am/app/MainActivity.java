@@ -17,7 +17,11 @@ public class MainActivity extends FragmentActivity implements BlankFragment.OnFr
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        CreatePlayer.defaultPlayer.setName("null");
+        CreatePlayer.defaultPlayer.setScore(0);
 
+        if (FinalScore.playerAdded != true)
+            HighScoreArray.arraySetValues();
 
     }
 

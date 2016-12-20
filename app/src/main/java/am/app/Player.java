@@ -1,10 +1,15 @@
 package am.app;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+
+import java.lang.reflect.Array;
+
 /**
  * Created by abbymitchell on 04/12/2016.
  */
 
-public class Player {
+public class Player implements Comparable<Player> {
 
     public String name;
     public int score;
@@ -12,6 +17,9 @@ public class Player {
     //Player player = new Player();
     //public Player player1 = new Player();
     //public Player player2 = new Player();
+
+    private SharedPreferences HSc;
+    public static final String H_SC = "High Score";
 
     public Player(){
         name = "Joe";
@@ -55,17 +63,37 @@ public class Player {
 
     public void scoreToHighScore(){                    //change to a do while loop maybe????
         randomPlace = (int)(Math.random()*10);
-        if (HighScoreArray.High_Scores[randomPlace] == null)
-        HighScoreArray.High_Scores[randomPlace] = CreatePlayer.player.ScoreToString();
+        Player highScorePlayer = new Player(CreatePlayer.player);
+
+        while(HighScoreArray.High_Scores[randomPlace] != CreatePlayer.defaultPlayer){
+            randomPlace=(int)(Math.random()*10);}
+
+        HighScoreArray.High_Scores[randomPlace] = highScorePlayer;
+        //HighScoreArray.High_Scores[randomPlace]
+
+        /*if (HighScoreArray.High_Scores[randomPlace] == null)
+        HighScoreArray.High_Scores[randomPlace] = CreatePlayer.player;
         else{
             randomPlace = (int)(Math.random()*10);
-            HighScoreArray.High_Scores[randomPlace] = CreatePlayer.player.ScoreToString();
-        }
+            HighScoreArray.High_Scores[randomPlace] = CreatePlayer.player;
+        }*/
+
 
     }
 
     public String ScoreToString(){
-        return ("Name:" + name + "\t\t\tScore:" + score);
+        return (name + "\t-\t" + score);
     }
 
+    @Override
+    public int compareTo(Player comparePlayer) {
+        int compareScore = ((Player) comparePlayer).getScore();
+        return compareScore - this.score;
+
+    }
+
+    public Player(Player aPlayer){
+        name = aPlayer.name;
+        score = aPlayer.score;
+    }
 }

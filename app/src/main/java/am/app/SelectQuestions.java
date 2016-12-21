@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Button;
 
+import static am.app.Players.multi;
+/*import static am.app.Players.strand;*/
 import static am.app.QuestionsArray.Questions_Array;
 import static android.R.attr.contentDescription;
 import static android.R.attr.value;
@@ -114,160 +116,149 @@ public class SelectQuestions extends AppCompatActivity {
         Log.d(TAG, "method called");
         number = 0;
         question1attempt=true;
-        Intent intent = new Intent(this, SelectQuestionScreen.class);
-        startActivity(intent);
+        //Intent intent = new Intent(this, SelectQuestionScreen.class);
+        //startActivity(intent);
+        if (multi = false) {
+            Intent intent = new Intent(this, SelectQuestionScreen.class);
+            startActivity(intent);
+        }
+        else if (multi = true) {
+            Intent intent = new Intent(this, QuestionScreen2.class);
+            startActivity(intent);
+        }
     }
 
     public void SelectQuestion2(View v){
         number = 1;
         question2attempt=true;
-        Intent intent = new Intent(this, SelectQuestionScreen.class);
-        startActivity(intent);
+        //Intent intent = new Intent(this, SelectQuestionScreen.class);
+        //startActivity(intent);
+        if(multi = false) {
+            Intent intent = new Intent(this, SelectQuestionScreen.class);
+            startActivity(intent);
+        }
+        else if (multi = true) {
+            Intent intent = new Intent(this, QuestionScreen2.class);
+            startActivity(intent);
+        }
     }
 
     public void SelectQuestion3(View v){
         number = 2;
         question3attempt=true;
-        Intent intent = new Intent(this, SelectQuestionScreen.class);
-        startActivity(intent);
+        //Intent intent = new Intent(this, SelectQuestionScreen.class);
+        //startActivity(intent);
+        if(multi = false) {
+            Intent intent = new Intent(this, SelectQuestionScreen.class);
+            startActivity(intent);
+        }
+        else if (multi = true) {
+            Intent intent = new Intent(this, QuestionScreen2.class);
+            startActivity(intent);
+        }
     }
     public void SelectQuestion4(View v){
         number = 3;
         question4attempt=true;
-        Intent intent = new Intent(this, SelectQuestionScreen.class);
-        startActivity(intent);
+        //Intent intent = new Intent(this, SelectQuestionScreen.class);
+        //startActivity(intent);
+        if(multi = false) {
+            Intent intent = new Intent(this, SelectQuestionScreen.class);
+            startActivity(intent);
+        }
+        else if (multi = true) {
+            Intent intent = new Intent(this, QuestionScreen2.class);
+            startActivity(intent);
+        }
     }
     public void SelectQuestion5(View v){
         number = 4;
         question5attempt=true;
-        Intent intent = new Intent(this, SelectQuestionScreen.class);
-        startActivity(intent);
+        //Intent intent = new Intent(this, SelectQuestionScreen.class);
+        //startActivity(intent);
+        if (multi = false) {
+            Intent intent = new Intent(this, SelectQuestionScreen.class);
+            startActivity(intent);
+        }
+        else if (multi = true) {
+            Intent intent = new Intent(this, QuestionScreen2.class);
+            startActivity(intent);
+        }
     }
     public void SelectQuestion6(View v){
         number = 5;
         question6attempt=true;
-        Intent intent = new Intent(this, SelectQuestionScreen.class);
-        startActivity(intent);
+        //Intent intent = new Intent(this, SelectQuestionScreen.class);
+        //startActivity(intent);
+        if(multi = false) {
+            Intent intent = new Intent(this, SelectQuestionScreen.class);
+            startActivity(intent);
+        }
+        else if (multi = true) {
+            Intent intent = new Intent(this, QuestionScreen2.class);
+            startActivity(intent);
+        }
     }
     public void SelectQuestion7(View v){
         number = 6;
         question7attempt=true;
-        Intent intent = new Intent(this, SelectQuestionScreen.class);
-        startActivity(intent);
+        //Intent intent = new Intent(this, SelectQuestionScreen.class);
+        //startActivity(intent);
+        if (multi = false) {
+            Intent intent = new Intent(this, SelectQuestionScreen.class);
+            startActivity(intent);
+        }
+        else if (multi = true) {
+            Intent intent = new Intent(this, QuestionScreen2.class);
+            startActivity(intent);
+        }
     }
     public void SelectQuestion8(View v){
         number = 7;
         question8attempt=true;
-        Intent intent = new Intent(this, SelectQuestionScreen.class);
-        startActivity(intent);
+        //Intent intent = new Intent(this, SelectQuestionScreen.class);
+        //startActivity(intent);
+        if (multi = false) {
+            Intent intent = new Intent(this, SelectQuestionScreen.class);
+            startActivity(intent);
+        }
+        else if (multi = true) {
+            Intent intent = new Intent(this, QuestionScreen2.class);
+            startActivity(intent);
+        }
     }
     public void SelectQuestion9(View v){
         number = 8;
         question9attempt=true;
-        Intent intent = new Intent(this, SelectQuestionScreen.class);
-        startActivity(intent);
+        //Intent intent = new Intent(this, SelectQuestionScreen.class);
+        //startActivity(intent);
+        if (multi = false) {
+            Intent intent = new Intent(this, SelectQuestionScreen.class);
+            startActivity(intent);
+        }
+        else if (multi = true) {
+            Intent intent = new Intent(this, QuestionScreen2.class);
+            startActivity(intent);
+        }
     }
     public void SelectQuestion10(View v){
         number = 9;
         question10attempt=true;
-        Intent intent = new Intent(this, SelectQuestionScreen.class);
-        startActivity(intent);
+        //Intent intent = new Intent(this, SelectQuestionScreen.class);
+        //startActivity(intent);
+        if (multi = false) {
+            Intent intent = new Intent(this, SelectQuestionScreen.class);
+            startActivity(intent);
+        }
+        else if (multi = true) {
+            Intent intent = new Intent(this, QuestionScreen2.class);
+            startActivity(intent);
+        }
     }
 
     public void GoToScore(View v){
         Intent intent = new Intent (this, FinalScore.class);
         startActivity(intent);
     }
-
-
-
-
-   /* public void SelectQuestion(View view){                                                          //Creates method so that the player can select a question
-
-        Qnumber = (int) contentDescription;
-        Log.e("tag", Integer.toString(Qnumber));
-
-            switch(Qnumber){                                                             //Each button has a content description with an integer value
-
-                case 1:
-                    number = 0;
-                    //view.setVisibility(View.GONE);                                                  //Deletes button
-                    Intent intent = new Intent(this, SelectQuestionScreen.class);
-                    startActivity(intent);
-                    break;
-
-                case 2:
-                    number = 1;
-                    //view.setVisibility(View.GONE);
-                    Intent intent2 = new Intent(this, SelectQuestionScreen.class);
-                    startActivity(intent2);
-                    break;
-
-                case 3:
-                    number = 2;
-                    //view.setVisibility(View.GONE);
-                    Intent intent3 = new Intent(this, SelectQuestionScreen.class);
-                    startActivity(intent3);
-                    break;
-
-                case 4:
-                    number = 3;
-                    //view.setVisibility(View.GONE);
-                    Intent intent4 = new Intent(this, SelectQuestionScreen.class);
-                    startActivity(intent4);
-                    break;
-
-                case 5:
-                    number = 4;
-                    //view.setVisibility(View.GONE);
-                    Intent intent5 = new Intent(this, SelectQuestionScreen.class);
-                    startActivity(intent5);
-                    break;
-
-                case 6:
-                    number = 5;
-                    //view.setVisibility(View.GONE);
-                    Intent intent6 = new Intent(this, SelectQuestionScreen.class);
-                    startActivity(intent6);
-                    break;
-
-                case 7:
-                    number = 6;
-                    //view.setVisibility(View.GONE);
-                    Intent intent7 = new Intent(this, SelectQuestionScreen.class);
-                    startActivity(intent7);
-                    break;
-
-                case 8:
-                    number = 7;
-                    //view.setVisibility(View.GONE);
-                    Intent intent8 = new Intent(this, SelectQuestionScreen.class);
-                    startActivity(intent8);
-                    break;
-
-                case 9:
-                    number = 8;
-                    //view.setVisibility(View.GONE);
-                    Intent intent9 = new Intent(this, SelectQuestionScreen.class);
-                    startActivity(intent9);
-                    break;
-
-                case 10:
-                    number = 9;
-                    //view.setVisibility(View.GONE);
-                    Intent intent10 = new Intent(this, SelectQuestionScreen.class);
-                    startActivity(intent10);
-                    break;
-
-                case 11:
-                    Intent intentFinal = new Intent(this, HighScores.class);
-                    startActivity(intentFinal);
-                    break;
-
-                default:
-                    Intent intent12 = new Intent(this, MainActivity.class);
-                    startActivity(intent12);
-                    break;
-        }*/
 
 }

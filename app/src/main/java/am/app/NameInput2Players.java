@@ -9,6 +9,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
 
+import static am.app.Players.multi;
+/*import static am.app.Players.strand;*/
+
 public class NameInput2Players extends AppCompatActivity {
 
     private EditText NameInput1;
@@ -37,9 +40,10 @@ public class NameInput2Players extends AppCompatActivity {
 
 
     public void SelectQuestionMethod2(View v) {
+        multi = true;
         CreatePlayer.player1.setName(NameInput1.getText().toString());
         CreatePlayer.player2.setName(NameInput2.getText().toString());
-        Intent intent = new Intent(this, QuestionMethod2.class); //Sends the players to the question method screen
+        Intent intent = new Intent(this, QuestionMethod.class); //Sends the players to the question method screen
         startActivity(intent);
     }
 }

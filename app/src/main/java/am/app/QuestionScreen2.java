@@ -14,7 +14,7 @@ import android.widget.TextView;
 import static am.app.CreatePlayer.player;
 import static am.app.QuestionsArray.Questions_Array;
 import static am.app.SelectQuestions.number;
-import static am.app.TransitionScreen.players;
+/*import static am.app.TransitionScreen.players;*/
 
 /*Question screen for 2 players mode.
 Allows the scores to be that of either p1 or p2,
@@ -47,6 +47,8 @@ public class QuestionScreen2 extends AppCompatActivity {
     RadioButton A = (RadioButton) findViewById(R.id.radioButtonA);
     RadioButton B = (RadioButton) findViewById(R.id.radioButtonB);
     RadioButton C = (RadioButton) findViewById(R.id.radioButtonC);
+    TextView playerNumber = (TextView) findViewById(R.id.PlayerNumber);
+    public static int players = 0; //Helps differentiate if it's player 1 or player 2 will be used throughout the game
     int randA, randB, randC;
     //public static int=0;
 
@@ -56,9 +58,13 @@ public class QuestionScreen2 extends AppCompatActivity {
 
         //checks which player is answering the question
         if (players % 2 == 0) {
+            //Tells who is playing
+            playerNumber.setText("Player 1");
             //Displays the score for player 1
             scoreview.setText("Score: " + CreatePlayer.player1.getScore());
         } else {
+            //Tells who is playing
+            playerNumber.setText("Player 2");
             //Displays the score for player 2
             scoreview.setText("Score: " + CreatePlayer.player2.getScore());
         }
@@ -182,5 +188,15 @@ public class QuestionScreen2 extends AppCompatActivity {
             }
         }
 
+        players = players++;
+    }
+
+    public void goToCheatSelect(View v){
+        Intent intent = new Intent(this, SelectCheat.class);
+        startActivity(intent);
+    }
+
+    public void goToSkipSelect(View v){
+        Intent intent = new Intent(this, SelectQuestions.class);
     }
 }

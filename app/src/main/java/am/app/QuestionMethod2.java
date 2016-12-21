@@ -1,6 +1,6 @@
 package am.app;
 
-import android.content.Intent;
+/*import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -25,6 +25,7 @@ public class QuestionMethod2 extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     public void RandomQuestions(View v){
@@ -38,4 +39,4 @@ public class QuestionMethod2 extends AppCompatActivity {
         startActivity(intent);
     }
 
-}
+}*/

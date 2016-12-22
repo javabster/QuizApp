@@ -12,6 +12,8 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 import static am.app.CreatePlayer.player;
+import static am.app.CreatePlayer.player1;
+import static am.app.CreatePlayer.player2;
 import static am.app.QuestionsArray.Questions_Array;
 import static am.app.SelectQuestions.number;
 /*import static am.app.TransitionScreen.players;*/
@@ -59,14 +61,14 @@ public class QuestionScreen2 extends AppCompatActivity {
         //checks which player is answering the question
         if (players % 2 == 0) {
             //Tells who is playing
-            playerNumber.setText("Player 1");
+            playerNumber.setText(player1.getName());
             //Displays the score for player 1
-            scoreview.setText("Score: " + CreatePlayer.player1.getScore());
+            scoreview.setText(player1.getScore());
         } else {
             //Tells who is playing
-            playerNumber.setText("Player 2");
+            playerNumber.setText(player2.getName());
             //Displays the score for player 2
-            scoreview.setText("Score: " + CreatePlayer.player2.getScore());
+            scoreview.setText(player2.getScore());
         }
 
         randA = (int) Math.random() * 3;
@@ -148,7 +150,7 @@ public class QuestionScreen2 extends AppCompatActivity {
                     if (checked) {
                         if (randA == 0) {
                             //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
-                            CreatePlayer.player2.addScore(1);
+                            player2.addScore(1);
                             Intent intentNext = new Intent(this, SelectCorrect.class);
                             startActivity(intentNext);
                         } else {
@@ -162,7 +164,7 @@ public class QuestionScreen2 extends AppCompatActivity {
                     if (checked) {
                         if (randB == 0) {
                             //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
-                            CreatePlayer.player2.addScore(1);
+                            player2.addScore(1);
                             Intent intentNext = new Intent(this, SelectCorrect.class);
                             startActivity(intentNext);
                         } else {
@@ -176,7 +178,7 @@ public class QuestionScreen2 extends AppCompatActivity {
                     if (checked) {
                         if (randA == 0) {
                             //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
-                            CreatePlayer.player2.addScore(1);
+                            player2.addScore(1);
                             Intent intentNext = new Intent(this, SelectCorrect.class);
                             startActivity(intentNext);
                         } else {

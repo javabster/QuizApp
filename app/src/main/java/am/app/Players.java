@@ -29,11 +29,10 @@ public class Players extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-    public static boolean multi;
+
 
     public void Players1(View v){
         CreatePlayer.player.setScore(0);
-        multi = false;
         Intent intent = new Intent(this, NameInput.class);
         startActivity(intent);
 
@@ -42,7 +41,6 @@ public class Players extends AppCompatActivity {
     public void Players2(View v){
         CreatePlayer.player1.setScore(0);
         CreatePlayer.player2.setScore(0);
-        multi = true;
         Intent intent = new Intent(this, NameInput2Players.class);
         startActivity(intent);
     }

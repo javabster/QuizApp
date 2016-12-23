@@ -114,16 +114,16 @@ public class SelectQuestions extends AppCompatActivity {
 
 
     public void SelectQuestion1(View v){
-        Log.d(TAG, "method called");
+        Log.d(TAG, "select q1 method called");
         number = 0;
         question1attempt=true;
         //Checks if the two players in multiplayer mode have names (i.e. exist); same in each method
-        if (player1.getName().length() != 0 && player2.getName().length() != 0 && player.getName().length() == 0) {
+        if (NameInput2Players.twoPlayerMode == true) {
             Intent intent2 = new Intent(this, QuestionScreen2.class); //Goes to multiplayer mode
             startActivity(intent2);
         }
         //Checks if the individual player has a name (i.e. exists); same in each method
-        else if (player.getName().length() != 0 && player1.getName().length() != 0 && player2.getName().length() != 0){
+        else {
             Intent intent = new Intent(this, SelectQuestionScreen.class);//Goes to single player mode
             startActivity(intent);
         }
@@ -133,11 +133,11 @@ public class SelectQuestions extends AppCompatActivity {
         number = 1;
         question2attempt=true;
 
-        if (player1.getName().length() != 0 && player2.getName().length() != 0 && player.getName().length() == 0) {
+        if (NameInput2Players.twoPlayerMode == true) {
             Intent intent2 = new Intent(this, QuestionScreen2.class); //Goes to multiplayer mode
             startActivity(intent2);
         }
-        else if (player.getName().length() != 0 && player1.getName().length() != 0 && player2.getName().length() != 0){
+        else {
             Intent intent = new Intent(this, SelectQuestionScreen.class);
             startActivity(intent);
         }
@@ -147,11 +147,11 @@ public class SelectQuestions extends AppCompatActivity {
         number = 2;
         question3attempt=true;
 
-        if (player1.getName().length() != 0 && player2.getName().length() != 0 && player.getName().length() == 0) {
+        if (NameInput2Players.twoPlayerMode == true) {
             Intent intent2 = new Intent(this, QuestionScreen2.class); //Goes to multiplayer mode
             startActivity(intent2);
         }
-        else if (player.getName().length() != 0 && player1.getName().length() != 0 && player2.getName().length() != 0){
+        else {
             Intent intent = new Intent(this, SelectQuestionScreen.class);
             startActivity(intent);
         }
@@ -160,11 +160,11 @@ public class SelectQuestions extends AppCompatActivity {
         number = 3;
         question4attempt=true;
 
-        if (player1.getName().length() != 0 && player2.getName().length() != 0 && player.getName().length() == 0) {
+        if (NameInput2Players.twoPlayerMode == true) {
             Intent intent2 = new Intent(this, QuestionScreen2.class); //Goes to multiplayer mode
             startActivity(intent2);
         }
-        else if (player.getName().length() != 0 && player1.getName().length() != 0 && player2.getName().length() != 0){
+        else {
             Intent intent = new Intent(this, SelectQuestionScreen.class);
             startActivity(intent);
         }
@@ -173,11 +173,11 @@ public class SelectQuestions extends AppCompatActivity {
         number = 4;
         question5attempt=true;
 
-        if (player1.getName().length() != 0 && player2.getName().length() != 0 && player.getName().length() == 0) {
+        if (NameInput2Players.twoPlayerMode == true) {
             Intent intent2 = new Intent(this, QuestionScreen2.class); //Goes to multiplayer mode
             startActivity(intent2);
         }
-        else if (player.getName().length() != 0 && player1.getName().length() != 0 && player2.getName().length() != 0){
+        else {
             Intent intent = new Intent(this, SelectQuestionScreen.class);
             startActivity(intent);
         }
@@ -186,11 +186,11 @@ public class SelectQuestions extends AppCompatActivity {
         number = 5;
         question6attempt=true;
 
-        if (player1.getName().length() != 0 && player2.getName().length() != 0 && player.getName().length() == 0) {
+        if (NameInput2Players.twoPlayerMode == true) {
             Intent intent2 = new Intent(this, QuestionScreen2.class); //Goes to multiplayer mode
             startActivity(intent2);
         }
-        else if (player.getName().length() != 0 && player1.getName().length() != 0 && player2.getName().length() != 0){
+        else {
             Intent intent = new Intent(this, SelectQuestionScreen.class);
             startActivity(intent);
         }
@@ -199,11 +199,11 @@ public class SelectQuestions extends AppCompatActivity {
         number = 6;
         question7attempt=true;
 
-        if (player1.getName().length() != 0 && player2.getName().length() != 0 && player.getName().length() == 0) {
+        if (NameInput2Players.twoPlayerMode == true) {
             Intent intent2 = new Intent(this, QuestionScreen2.class); //Goes to multiplayer mode
             startActivity(intent2);
         }
-        else if (player.getName().length() != 0 && player1.getName().length() != 0 && player2.getName().length() != 0){
+        else {
             Intent intent = new Intent(this, SelectQuestionScreen.class);
             startActivity(intent);
         }
@@ -212,11 +212,11 @@ public class SelectQuestions extends AppCompatActivity {
         number = 7;
         question8attempt=true;
 
-        if (player1.getName().length() != 0 && player2.getName().length() != 0 && player.getName().length() == 0) {
+        if (NameInput2Players.twoPlayerMode == true) {
             Intent intent2 = new Intent(this, QuestionScreen2.class); //Goes to multiplayer mode
             startActivity(intent2);
         }
-        else if (player.getName().length() != 0 && player1.getName().length() != 0 && player2.getName().length() != 0){
+        else {
             Intent intent = new Intent(this, SelectQuestionScreen.class);
             startActivity(intent);
         }
@@ -225,11 +225,11 @@ public class SelectQuestions extends AppCompatActivity {
         number = 8;
         question9attempt=true;
 
-        if (player1.getName().length() != 0 && player2.getName().length() != 0 && player.getName().length() == 0) {
+        if (NameInput2Players.twoPlayerMode == true) {
             Intent intent2 = new Intent(this, QuestionScreen2.class); //Goes to multiplayer mode
             startActivity(intent2);
         }
-        else if (player.getName().length() != 0 && player1.getName().length() != 0 && player2.getName().length() != 0){
+        else {
             Intent intent = new Intent(this, SelectQuestionScreen.class);
             startActivity(intent);
         }
@@ -238,11 +238,11 @@ public class SelectQuestions extends AppCompatActivity {
         number = 9;
         question10attempt=true;
 
-        if (player1.getName().length() != 0 && player2.getName().length() != 0 && player.getName().length() == 0) {
+        if (NameInput2Players.twoPlayerMode == true) {
             Intent intent2 = new Intent(this, QuestionScreen2.class); //Goes to multiplayer mode
             startActivity(intent2);
         }
-        else if (player.getName().length() != 0 && player1.getName().length() != 0 && player2.getName().length() != 0){
+        else {
             Intent intent = new Intent(this, SelectQuestionScreen.class);
             startActivity(intent);
         }

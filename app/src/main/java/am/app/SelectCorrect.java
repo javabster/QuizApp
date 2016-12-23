@@ -31,7 +31,7 @@ public class SelectCorrect extends AppCompatActivity {
 
     public void getNextQuestion(View view){
 
-        Intent intentAfter = new Intent(this, SelectQuestions.class);
+            Intent intentAfter = new Intent(this, SelectQuestions.class);
         startActivity(intentAfter);
 
     }

@@ -13,8 +13,11 @@ import android.widget.EditText;
 
 public class NameInput2Players extends AppCompatActivity {
 
-    private EditText NameInput1;
-    private EditText NameInput2;
+    private static EditText NameInput1;
+    private static EditText NameInput2;
+    public static String Name1;
+    public static String Name2;
+    public static boolean twoPlayerMode = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +25,6 @@ public class NameInput2Players extends AppCompatActivity {
         setContentView(R.layout.activity_name_input2_players);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        NameInput1 = (EditText) findViewById(R.id.Player1Name);
-        NameInput2 = (EditText) findViewById(R.id.Player2Name);
-
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -35,12 +34,22 @@ public class NameInput2Players extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+
     }
 
 
     public void SelectQuestionMethod2(View v) {
-        CreatePlayer.player1.setName(NameInput1.getText().toString());
-        CreatePlayer.player2.setName(NameInput2.getText().toString());
+        EditText NameInput1 = (EditText) findViewById(R.id.Player1Name);
+        EditText NameInput2 = (EditText) findViewById(R.id.Player2Name);
+        Name1 = NameInput1.getText().toString();
+        Name2 = NameInput2.getText().toString();
+
+        CreatePlayer.player1.setName(Name1);
+        CreatePlayer.player1.setScore(0);
+        CreatePlayer.player2.setName(Name2);
+        CreatePlayer.player2.setScore(0);
+        twoPlayerMode=true;
         Intent intent = new Intent(this, QuestionMethod.class); //Sends the players to the question method screen
         startActivity(intent);
     }

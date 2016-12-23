@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -24,6 +25,12 @@ and also keeps count of the scores each one individually*/
 
 public class QuestionScreen2 extends AppCompatActivity {
 
+    private static String TAG = "QuestionScreen2";
+    int randA, randB, randC;
+    public static int players = 0; //Helps differentiate if it's player 1 or player 2 will be used throughout the game
+
+    //public static int=0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,50 +46,50 @@ public class QuestionScreen2 extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-    }
 
-    // Each object on the screen is assigned to a variable which is to be used in the method
-    TextView textview = (TextView) findViewById(R.id.textView3);
-    TextView scoreview = (TextView) findViewById(R.id.textView5);
-    Button cheatButton = (Button) findViewById(R.id.CheatButton);
-    Button skipButton = (Button) findViewById(R.id.SkipButton);
-    RadioButton A = (RadioButton) findViewById(R.id.radioButtonA);
-    RadioButton B = (RadioButton) findViewById(R.id.radioButtonB);
-    RadioButton C = (RadioButton) findViewById(R.id.radioButtonC);
-    TextView playerNumber = (TextView) findViewById(R.id.PlayerNumber);
-    public static int players = 0; //Helps differentiate if it's player 1 or player 2 will be used throughout the game
-    int randA, randB, randC;
-    //public static int=0;
 
-    public void displayQuestion(View view) {
+        // Each object on the screen is assigned to a variable which is to be used in the method
+        TextView textview = (TextView) findViewById(R.id.question2player);
+        TextView scoreview = (TextView) findViewById(R.id.Score2);
+        Button cheatButton = (Button) findViewById(R.id.CheatButton2);
+        Button skipButton = (Button) findViewById(R.id.SkipButton2);
+        RadioButton A = (RadioButton) findViewById(R.id.radioButtonA2);
+        RadioButton B = (RadioButton) findViewById(R.id.radioButtonB2);
+        RadioButton C = (RadioButton) findViewById(R.id.radioButtonC2);
+        TextView playerNumber = (TextView) findViewById(R.id.PlayerNumber);
+
+        Log.d(TAG, "QuestionScreen2 reached");
 
         textview.setText(Questions_Array[number]); //displays question 1 after the player has chosen it.
+        Log.d(TAG, "Question selected");
 
         //checks which player is answering the question
         if (players % 2 == 0) {
             //Tells who is playing
-            playerNumber.setText(player1.getName());
+            playerNumber.setText(CreatePlayer.player1.getName());
             //Displays the score for player 1
-            scoreview.setText(player1.getScore());
+            scoreview.setText(String.valueOf(CreatePlayer.player1.getScore()));
         } else {
             //Tells who is playing
-            playerNumber.setText(player2.getName());
+            playerNumber.setText(CreatePlayer.player2.getName());
             //Displays the score for player 2
-            scoreview.setText(player2.getScore());
+            scoreview.setText(String.valueOf(CreatePlayer.player2.getScore()));
         }
 
-        randA = (int) Math.random() * 3;
-        randB = (int) Math.random() * 3;
+        Log.d(TAG, "first if else statement done");
+
+        randA = (int) (Math.random() * 3);
+        randB = (int) (Math.random() * 3);
 
         //Checks numbers are not the same
         while (randB == randA) {
-            randB = (int) Math.random() * 3;
+            randB = (int) (Math.random() * 3);
         }
-        randC = (int) Math.random() * 3;
+        randC = (int) (Math.random() * 3);
 
         //Checks numbers are not the same
         while (randC == randA || randC == randB) {
-            randC = (int) Math.random() * 3;
+            randC = (int) (Math.random() * 3);
         }
 
         //Assigns the position of each under randomly, so that the position never stays the same
@@ -90,53 +97,61 @@ public class QuestionScreen2 extends AppCompatActivity {
         B.setText(AnswerRandomiser.getAnswer(number, randB));
         C.setText(AnswerRandomiser.getAnswer(number, randC));
 
+
     }
 
-    public void onRadioButtonClicked(View view) {
+
+
+    public void onRadioButtonClicked2(View view) {
 
         boolean checked = ((RadioButton) view).isChecked();
-
 
         //Checks which player is playing, case for player 1
         if (players % 2 == 0) {
             // Check which radio button was clicked
             switch (view.getId()) {
-                case R.id.Aa:
+                case R.id.radioButtonA2:
                     if (checked) {
                         if (randA == 0) {
                             //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
                             CreatePlayer.player1.addScore(1);
+                            players = players+1;
                             Intent intentNext = new Intent(this, SelectCorrect.class);
                             startActivity(intentNext);
                         } else {
+                            players = players+1;
                             Intent intentNext = new Intent(this, SelectIncorrect.class);
                             startActivity(intentNext);
                         }
                     }
                     break;
 
-                case R.id.Bb:
+                case R.id.radioButtonB2:
                     if (checked) {
                         if (randB == 0) {
                             //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
                             CreatePlayer.player1.addScore(1);
+                            players = players+1;
                             Intent intentNext = new Intent(this, SelectCorrect.class);
                             startActivity(intentNext);
                         } else {
+                            players = players+1;
                             Intent intentNext = new Intent(this, SelectIncorrect.class);
                             startActivity(intentNext);
                         }
                     }
 
                     break;
-                case R.id.Cc:
+                case R.id.radioButtonC2:
                     if (checked) {
-                        if (randA == 0) {
+                        if (randC == 0) {
                             //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
                             CreatePlayer.player1.addScore(1);
+                            players = players+1;
                             Intent intentNext = new Intent(this, SelectCorrect.class);
                             startActivity(intentNext);
                         } else {
+                            players = players+1;
                             Intent intentNext = new Intent(this, SelectIncorrect.class);
                             startActivity(intentNext);
                         }
@@ -146,42 +161,48 @@ public class QuestionScreen2 extends AppCompatActivity {
         } else { //for player 2
             //Checks which button was selected
             switch (view.getId()) {
-                case R.id.Aa:
+                case R.id.radioButtonA2:
                     if (checked) {
                         if (randA == 0) {
                             //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
                             player2.addScore(1);
+                            players = players+1;
                             Intent intentNext = new Intent(this, SelectCorrect.class);
                             startActivity(intentNext);
                         } else {
+                            players = players+1;
                             Intent intentNext = new Intent(this, SelectIncorrect.class);
                             startActivity(intentNext);
                         }
                     }
                     break;
 
-                case R.id.Bb:
+                case R.id.radioButtonB2:
                     if (checked) {
                         if (randB == 0) {
                             //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
                             player2.addScore(1);
+                            players = players+1;
                             Intent intentNext = new Intent(this, SelectCorrect.class);
                             startActivity(intentNext);
                         } else {
+                            players = players+1;
                             Intent intentNext = new Intent(this, SelectIncorrect.class);
                             startActivity(intentNext);
                         }
                     }
 
                     break;
-                case R.id.Cc:
+                case R.id.radioButtonC2:
                     if (checked) {
-                        if (randA == 0) {
+                        if (randC == 0) {
                             //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
                             player2.addScore(1);
+                            players = players+1;
                             Intent intentNext = new Intent(this, SelectCorrect.class);
                             startActivity(intentNext);
                         } else {
+                            players = players+1;
                             Intent intentNext = new Intent(this, SelectIncorrect.class);
                             startActivity(intentNext);
                         }
@@ -190,15 +211,18 @@ public class QuestionScreen2 extends AppCompatActivity {
             }
         }
 
-        players = players++;
     }
 
     public void goToCheatSelect(View v){
+        players = players+1;
         Intent intent = new Intent(this, SelectCheat.class);
         startActivity(intent);
     }
 
     public void goToSkipSelect(View v){
+        players = players+1;
         Intent intent = new Intent(this, SelectQuestions.class);
+        startActivity(intent);
     }
+
 }

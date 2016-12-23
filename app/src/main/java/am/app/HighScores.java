@@ -35,11 +35,6 @@ public class HighScores extends AppCompatActivity {
         HighScoreArray.arrayToString();
 
         highscores = (TextView) findViewById(R.id.HighScores);
-        /*highscores.setText("1:  " + HighScoreArray.High_Scores[0] + "\n2:  " + HighScoreArray.High_Scores[1]
-                + "\n3:  " + HighScoreArray.High_Scores[2] + "\n4:  " + HighScoreArray.High_Scores[3] + "\n5:  "
-                + HighScoreArray.High_Scores[4] + "\n6:  " + HighScoreArray.High_Scores[5] + "\n7:  " +
-                HighScoreArray.High_Scores[6] + "\n8:  " + HighScoreArray.High_Scores[7]
-                + "\n9:  " + HighScoreArray.High_Scores[8] +"\n10: " + HighScoreArray.High_Scores[9]);*/
 
         highscores.setText("1:  " + HighScoreArray.High_Scores_Strings[0] + "\n2:  " + HighScoreArray.High_Scores_Strings[1]
          + "\n3:  " + HighScoreArray.High_Scores_Strings[2] + "\n4:  " + HighScoreArray.High_Scores_Strings[3] + "\n5:  "

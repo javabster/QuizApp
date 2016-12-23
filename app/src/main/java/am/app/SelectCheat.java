@@ -36,7 +36,8 @@ public class SelectCheat extends AppCompatActivity {
 
 
     public void goToNext(View v){
-        Intent intent = new Intent(this, SelectQuestions.class);
+
+            Intent intent = new Intent(this, SelectQuestions.class);
         startActivity(intent);
     }
 

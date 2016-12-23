@@ -18,12 +18,10 @@ public class FinalScore extends AppCompatActivity {
 
     private static String TAG = "etc";
     public TextView finalScore;
+    public TextView finalScore2;
     public static boolean playerAdded;
 
-    private SharedPreferences HSc;
-    public static final String H_SC = "High Score";
 
-    private SharedPreferences prefs;
 
 
     @Override
@@ -43,27 +41,22 @@ public class FinalScore extends AppCompatActivity {
         });
 
         Log.d(TAG, "arrived at score screen");
-        /*HSc = getSharedPreferences(H_SC, 0);
-        SharedPreferences.Editor scoreEdit = HSc.edit();
-        String scores = HSc.getString("HighScores", "");
-        scoreEdit.putString("HighScores", ""+CreatePlayer.player.name+" - "+CreatePlayer.player.score);
-        scoreEdit.commit();
-        SharedPreferences prefs = this.getSharedPreferences("myPrefsKey", Context.MODE_PRIVATE);*/
-
-        /*SharedPreferences mPrefs = getPreferences(MODE_PRIVATE);
-        SharedPreferences.Editor prefsEditor = mPrefs.edit();
-        Gson gson = new Gson();
-        String json = gson.toJson(CreatePlayer.player); // myObject - instance of MyObject
-        prefsEditor.putString("MyObject", json);
-        prefsEditor.commit();*/
-
-
-        finalScore = (TextView) findViewById(R.id.finalscore);
-        finalScore.setText(CreatePlayer.player.scoreToString());
-
-
         playerAdded = true;
-        CreatePlayer.player.scoreToHighScore();
+
+        if (NameInput2Players.twoPlayerMode=true){
+            CreatePlayer.player1.scoreToHighScore();
+            CreatePlayer.player2.scoreToHighScore();
+            finalScore = (TextView) findViewById(R.id.finalscore);
+            finalScore.setText(CreatePlayer.player1.getName() + "-" + CreatePlayer.player1.scoreToString() + "\n" +
+                    CreatePlayer.player2.getName() + "-" + CreatePlayer.player2.scoreToString());
+            //finalScore.setVisibility(View.INVISIBLE);
+        }
+        else{
+            CreatePlayer.player.scoreToHighScore();
+            finalScore = (TextView) findViewById(R.id.finalscore);
+            finalScore.setText(CreatePlayer.player.scoreToString());
+            //finalScore2.setVisibility(View.INVISIBLE);
+        }
 
 
 

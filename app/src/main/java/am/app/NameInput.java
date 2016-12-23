@@ -36,19 +36,13 @@ public class NameInput extends AppCompatActivity {
 
         //GoButton = (Button) findViewById(R.id.gobutton); //finding button in the other xml file
         NameInput = (EditText) findViewById(R.id.enter_name);
-        //GoButton.setOnClickListener(new View.OnClickListener(){ //instructions for what to do when button clicked
-          //  public void onClick(View v){
-            //    CreatePlayer.player.setName(NameInput.getText().toString());
-              //  Intent intent = new Intent(this, SelectQuestion);
-                //startActivity(intent);
 
-         //   }
-        //});
 
 
     }
 
     public void SelectQuestionMethod(View v){
+        NameInput2Players.twoPlayerMode=false;
         CreatePlayer.player.setName(NameInput.getText().toString());
         Intent intent = new Intent(this, QuestionMethod.class);
         startActivity(intent);

@@ -13,11 +13,6 @@
     tools:context="am.app.FinalScore"
     tools:showIn="@layout/activity_final_score">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@+id/finalscore"
-        android:id="@+id/finalscore"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -36,5 +31,15 @@
         android:layout_below="@+id/textView11"
         android:layout_alignRight="@+id/button7"
         android:layout_alignEnd="@+id/button7" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@+id/finalscore"
+        android:id="@+id/finalscore"
+        android:layout_below="@+id/textView12"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="87dp" />
+
 
 </RelativeLayout>

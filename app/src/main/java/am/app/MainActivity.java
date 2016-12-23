@@ -23,6 +23,20 @@ public class MainActivity extends FragmentActivity implements BlankFragment.OnFr
         if (FinalScore.playerAdded != true)
             HighScoreArray.arraySetValues();
 
+        SelectQuestions.question1attempt = false;
+        SelectQuestions.question2attempt = false;
+        SelectQuestions.question3attempt = false;
+        SelectQuestions.question4attempt = false;
+        SelectQuestions.question5attempt = false;
+        SelectQuestions.question6attempt = false;
+        SelectQuestions.question7attempt = false;
+        SelectQuestions.question8attempt = false;
+        SelectQuestions.question9attempt = false;
+        SelectQuestions.question10attempt = false;
+
+        NameInput2Players.twoPlayerMode = false;
+
+
     }
 
     public void Players(View v){

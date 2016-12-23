@@ -14,6 +14,7 @@ public class Player implements Comparable<Player> {
     public String name;
     public int score;
     public int randomPlace;
+    public int randomPlace2;
     //Player player = new Player();
     //public Player player1 = new Player();
     //public Player player2 = new Player();
@@ -61,22 +62,25 @@ public class Player implements Comparable<Player> {
         return (Integer.toString(score));
     }
 
-    public void scoreToHighScore(){                    //change to a do while loop maybe????
+    public void scoreToHighScore(){
         randomPlace = (int)(Math.random()*10);
+        randomPlace2 = (int)(Math.random()*10);
         Player highScorePlayer = new Player(CreatePlayer.player);
+        Player highScorePlayer1 = new Player(CreatePlayer.player1);
+        Player highScorePlayer2 = new Player(CreatePlayer.player2);
 
         while(HighScoreArray.High_Scores[randomPlace] != CreatePlayer.defaultPlayer){
             randomPlace=(int)(Math.random()*10);}
 
-        HighScoreArray.High_Scores[randomPlace] = highScorePlayer;
-        //HighScoreArray.High_Scores[randomPlace]
+        while(HighScoreArray.High_Scores[randomPlace2] != CreatePlayer.defaultPlayer){
+            randomPlace2=(int)(Math.random()*10);}
 
-        /*if (HighScoreArray.High_Scores[randomPlace] == null)
-        HighScoreArray.High_Scores[randomPlace] = CreatePlayer.player;
-        else{
-            randomPlace = (int)(Math.random()*10);
-            HighScoreArray.High_Scores[randomPlace] = CreatePlayer.player;
-        }*/
+        if (NameInput2Players.twoPlayerMode=true){
+            HighScoreArray.High_Scores[randomPlace] = highScorePlayer1;
+            HighScoreArray.High_Scores[randomPlace2] = highScorePlayer2;
+        }
+        else HighScoreArray.High_Scores[randomPlace] = highScorePlayer;
+
 
 
     }

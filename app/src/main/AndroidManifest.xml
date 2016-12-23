@@ -109,6 +109,10 @@
             android:name=".QuestionsOrder"
             android:label="@string/title_activity_questions_order"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".QuestionScreen2"
+            android:label=".QuestionScreen2"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

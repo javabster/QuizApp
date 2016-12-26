@@ -48,6 +48,8 @@ public class SelectQuestions extends AppCompatActivity {
     public Button button10;
     public ViewGroup SelectQuestionLayout;
 
+    public static boolean scores2player;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -249,6 +251,11 @@ public class SelectQuestions extends AppCompatActivity {
     }
 
     public void GoToScore(View v){
+        if (NameInput2Players.twoPlayerMode == true){
+            scores2player = true;
+        }
+        else scores2player = false;
+
         Intent intent = new Intent (this, FinalScore.class);
         startActivity(intent);
     }

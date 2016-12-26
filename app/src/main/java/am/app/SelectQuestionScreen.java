@@ -39,7 +39,7 @@ public class SelectQuestionScreen extends AppCompatActivity {
             }
         });
 
-        Log.d(TAG, "onCreate(Bundle) called");
+        Log.d(TAG, "arrived at 1 player select question screen");
         TextView textview = (TextView) findViewById(R.id.textView3);
         RadioButton A = (RadioButton) findViewById(R.id.radioButtonA);
         RadioButton B = (RadioButton) findViewById(R.id.radioButtonB);

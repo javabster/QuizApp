@@ -23,7 +23,7 @@ public class Player implements Comparable<Player> {
     public static final String H_SC = "High Score";
 
     public Player(){
-        name = "Joe";
+        name = "null";
         score = 0;
     }
 
@@ -64,26 +64,36 @@ public class Player implements Comparable<Player> {
 
     public void scoreToHighScore(){
         randomPlace = (int)(Math.random()*10);
-        randomPlace2 = (int)(Math.random()*10);
         Player highScorePlayer = new Player(CreatePlayer.player);
-        Player highScorePlayer1 = new Player(CreatePlayer.player1);
-        Player highScorePlayer2 = new Player(CreatePlayer.player2);
+
 
         while(HighScoreArray.High_Scores[randomPlace] != CreatePlayer.defaultPlayer){
             randomPlace=(int)(Math.random()*10);}
 
-        while(HighScoreArray.High_Scores[randomPlace2] != CreatePlayer.defaultPlayer){
-            randomPlace2=(int)(Math.random()*10);}
+        HighScoreArray.High_Scores[randomPlace] = highScorePlayer;
+    }
 
-        if (NameInput2Players.twoPlayerMode=true){
-            HighScoreArray.High_Scores[randomPlace] = highScorePlayer1;
-            HighScoreArray.High_Scores[randomPlace2] = highScorePlayer2;
-        }
-        else HighScoreArray.High_Scores[randomPlace] = highScorePlayer;
+    public void scoreToHighScorePlayer1(){
+        Player highScorePlayer1 = new Player(CreatePlayer.player1);
+        randomPlace = (int)(Math.random()*10);
 
+        while(HighScoreArray.High_Scores[randomPlace] != CreatePlayer.defaultPlayer){
+            randomPlace=(int)(Math.random()*10);}
 
+        HighScoreArray.High_Scores[randomPlace] = highScorePlayer1;
+    }
+
+    public void scoreToHighScorePlayer2(){
+        Player highScorePlayer2 = new Player(CreatePlayer.player2);
+        randomPlace = (int)(Math.random()*10);
+
+        while(HighScoreArray.High_Scores[randomPlace] != CreatePlayer.defaultPlayer){
+            randomPlace=(int)(Math.random()*10);}
+
+        HighScoreArray.High_Scores[randomPlace] = highScorePlayer2;
 
     }
+
 
     public String ScoreToString(){
         return (name + "\t-\t" + score);

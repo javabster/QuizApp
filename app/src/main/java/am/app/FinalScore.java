@@ -43,9 +43,9 @@ public class FinalScore extends AppCompatActivity {
         Log.d(TAG, "arrived at score screen");
         playerAdded = true;
 
-        if (NameInput2Players.twoPlayerMode=true){
-            CreatePlayer.player1.scoreToHighScore();
-            CreatePlayer.player2.scoreToHighScore();
+        if (SelectQuestions.scores2player==true){
+            CreatePlayer.player1.scoreToHighScorePlayer1();
+            CreatePlayer.player2.scoreToHighScorePlayer2();
             finalScore = (TextView) findViewById(R.id.finalscore);
             finalScore.setText(CreatePlayer.player1.getName() + "-" + CreatePlayer.player1.scoreToString() + "\n" +
                     CreatePlayer.player2.getName() + "-" + CreatePlayer.player2.scoreToString());

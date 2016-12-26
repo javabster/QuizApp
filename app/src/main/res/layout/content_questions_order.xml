@@ -14,50 +14,11 @@
     tools:showIn="@layout/activity_questions_order">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/question_order"/>
-
-
-
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
     </RadioGroup>
-
-    <RadioButton android:id="@+id/Bb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@+id/B"
-        android:onClick = "onRadioButtonClicked"
-        android:layout_above="@+id/Cc"
-        android:layout_toRightOf="@+id/question_order"
-        android:layout_toEndOf="@+id/question_order"
-        android:layout_marginBottom="69dp" />
-
-    <RadioButton android:id="@+id/Cc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@+id/C"
-        android:onClick = "onRadioButtonClicked"
-        android:layout_marginBottom="145dp"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/question_order"
-        android:layout_toEndOf="@+id/question_order" />
-
-    <RadioButton android:id="@+id/Aa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@+id/A"
-        android:onClick="onRadioButtonClicked"
-        android:layout_alignBottom="@+id/Bb"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="12dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="72dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -65,12 +26,43 @@
         android:text="CHEAT"
         android:id="@+id/cheat_button"
         android:onClick="goToCheat"
-        android:layout_alignBottom="@+id/skip_button"
-        android:layout_toRightOf="@+id/skip_button"
-        android:layout_toEndOf="@+id/skip_button"
-        android:layout_marginLeft="52dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginBottom="10dp" />
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="62dp"
+        android:layout_marginEnd="62dp" />
+
+    <RadioButton android:id="@+id/Bb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@+id/B"
+        android:onClick = "onRadioButtonClicked"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/cheat_button"
+        android:layout_alignEnd="@+id/cheat_button"
+        android:layout_marginRight="128dp"
+        android:layout_marginEnd="128dp" />
+
+    <RadioButton android:id="@+id/Aa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@+id/A"
+        android:onClick="onRadioButtonClicked"
+        android:layout_marginBottom="31dp"
+        android:layout_above="@+id/Bb"
+        android:layout_alignLeft="@+id/Bb"
+        android:layout_alignStart="@+id/Bb" />
+
+    <RadioButton android:id="@+id/Cc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@+id/C"
+        android:onClick = "onRadioButtonClicked"
+        android:layout_below="@+id/Aa"
+        android:layout_alignLeft="@+id/Bb"
+        android:layout_alignStart="@+id/Bb"
+        android:layout_marginTop="59dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -78,11 +70,39 @@
         android:text="SKIP"
         android:id="@+id/skip_button"
         android:onClick="goToNextQuestion"
-        android:layout_marginLeft="40dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginBottom="70dp"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/question_order"
-        android:layout_toEndOf="@+id/question_order" />
+        android:layout_alignBaseline="@+id/cheat_button"
+        android:layout_alignBottom="@+id/cheat_button"
+        android:layout_alignRight="@+id/Cc"
+        android:layout_alignEnd="@+id/Cc" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/question_order"
+        android:textSize="18sp"
+        android:layout_below="@+id/radioGroup2"
+        android:layout_toRightOf="@+id/Aa"
+        android:layout_toEndOf="@+id/Aa"
+        android:layout_marginTop="44dp" />
+
+    <TextView
+        android:text="Score: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView19"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView19"
+        android:layout_toRightOf="@+id/radioGroup"
+        android:layout_toEndOf="@+id/radioGroup"
+        android:id="@+id/textView20"
+        android:textSize="18sp" />
 
 </RelativeLayout>

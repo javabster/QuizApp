@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import static am.app.NameInput2Players.twoPlayerMode;
+
 public class QuestionMethod extends AppCompatActivity {
 
     @Override
@@ -29,8 +31,14 @@ public class QuestionMethod extends AppCompatActivity {
     }
 
     public void RandomQuestions(View v){
-        Intent intent = new Intent(this, QuestionsOrder.class);
-        startActivity(intent);
+        if (NameInput2Players.twoPlayerMode == true) {
+            Intent intent = new Intent(this, QuestionsOrder2.class);
+            startActivity(intent);
+        }
+        else{
+            Intent intent = new Intent(this, QuestionsOrder.class);
+            startActivity(intent);
+        }
     }
 
     public void SelectQuestions(View v){

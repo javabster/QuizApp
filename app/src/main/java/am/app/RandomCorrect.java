@@ -39,9 +39,14 @@ public class RandomCorrect extends AppCompatActivity {
             startActivity(intent);
         }
 
+        else if (NameInput2Players.twoPlayerMode == true){
+            Intent intent = new Intent(this, QuestionsOrder2.class);
+            startActivity(intent);
+        }
         else{
-            Intent intent = new Intent(this, QuestionsOrder.class);
-            startActivity(intent);}
+            Intent intent = new Intent(this, QuestionsOrder2.class);
+            startActivity(intent);
+        }
     }
 
 }

@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import static am.app.CreatePlayer.player;
+
 public class QuestionsOrder extends AppCompatActivity {
 
     public TextView question;
@@ -52,7 +54,8 @@ public class QuestionsOrder extends AppCompatActivity {
 
         TextView question = (TextView) findViewById(R.id.question_order);
         question.setText(QuestionsArray.getQuestion(randomNumber));
-
+        TextView scoreview = (TextView) findViewById(R.id.textView20);
+        scoreview.setText(player.getScore());
 
         randomA = (int) (Math.random() * 3);
         randomB = (int) (Math.random() * 3);
@@ -85,7 +88,7 @@ public class QuestionsOrder extends AppCompatActivity {
             case R.id.Aa:
                 if (checked){
                     if (randomA == 0){  //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be calle
-                        CreatePlayer.player.addScore(1);
+                        player.addScore(1);
                         Intent intent = new Intent(this, RandomCorrect.class);
                         startActivity(intent);}
                     else {Intent intent = new Intent(this, RandomIncorrect.class);
@@ -94,7 +97,7 @@ public class QuestionsOrder extends AppCompatActivity {
             case R.id.Bb:
                 if (checked) {
                     if (randomB == 0) {
-                        CreatePlayer.player.addScore(1);
+                        player.addScore(1);
                         Intent intent = new Intent(this, RandomCorrect.class);
                         startActivity(intent);
                     } else {
@@ -105,7 +108,7 @@ public class QuestionsOrder extends AppCompatActivity {
             case R.id.Cc:
                 if (checked) {
                     if (randomC == 0) {
-                        CreatePlayer.player.addScore(1);
+                        player.addScore(1);
                         Intent intent = new Intent(this, RandomCorrect.class);
                         startActivity(intent);
                     } else {

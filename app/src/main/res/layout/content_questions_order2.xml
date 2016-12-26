@@ -53,55 +53,65 @@
         android:layout_below="@+id/textView21"
         android:layout_centerHorizontal="true" />
 
-    <RadioButton
-        android:text="RadioButton"
+
+    <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
-        android:id="@+id/Aa2"
-        android:textSize="14sp"
         android:layout_below="@+id/textView13"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:text="Cheat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button16"
-        android:layout_below="@+id/Cc2"
-        android:layout_toRightOf="@+id/Cc2"
-        android:layout_toEndOf="@+id/Cc2"
-        android:layout_marginTop="12dp" />
-
-    <Button
-        android:text="Skip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button15"
-        android:layout_toLeftOf="@+id/Cc2"
-        android:layout_toStartOf="@+id/Cc2"
-        android:layout_marginRight="12dp"
-        android:layout_marginEnd="12dp"
-        android:layout_alignBottom="@+id/button16"
-        android:layout_alignTop="@+id/button16" />
-
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp">
     <RadioButton
         android:text="RadioButton"
+        android:onClick="onRadioButtonClicked2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:id="@+id/Bb2"
+        android:id="@+id/Bb2R"
         android:layout_below="@+id/Aa2"
         android:layout_alignLeft="@+id/Aa2"
         android:layout_alignStart="@+id/Aa2" />
 
     <RadioButton
         android:text="RadioButton"
+        android:onClick="onRadioButtonClicked2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="51dp"
-        android:id="@+id/Cc2"
+        android:id="@+id/Cc2R"
         android:layout_below="@+id/Bb2"
         android:layout_alignLeft="@+id/Bb2"
         android:layout_alignStart="@+id/Bb2" />
+
+    <RadioButton
+        android:text="RadioButton"
+        android:onClick="onRadioButtonClicked2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:id="@+id/Aa2R"
+        android:textSize="14sp"
+        android:layout_below="@+id/textView13"
+        android:layout_centerHorizontal="true" />
+    </RadioGroup>
+
+    <Button
+        android:text="Skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button15"
+        android:onClick="goToSkipRandom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/textView21"
+        android:layout_alignEnd="@+id/textView21"
+        android:layout_marginBottom="31dp" />
+
+    <Button
+        android:text="Cheat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button16"
+        android:onClick="goToCheatRandom"
+        android:layout_alignBottom="@+id/radioGroup3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>

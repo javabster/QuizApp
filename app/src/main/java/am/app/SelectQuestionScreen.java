@@ -9,11 +9,9 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Button;
 import android.widget.RadioButton;
 
 import static am.app.CreatePlayer.player;
-import static am.app.QuestionsArray.Questions_Array;
 import static am.app.SelectQuestions.number;
 
 public class SelectQuestionScreen extends AppCompatActivity {
@@ -24,6 +22,7 @@ public class SelectQuestionScreen extends AppCompatActivity {
     RadioButton B;
     RadioButton C;
     int randA, randB, randC;
+    public static boolean select;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +48,7 @@ public class SelectQuestionScreen extends AppCompatActivity {
         randA = (int) (Math.random() * 3);
         randB = (int) (Math.random() * 3);
         TextView scoreview = (TextView) findViewById(R.id.textView5);
-        scoreview.setText(player.getScore());
+        scoreview.setText(String.valueOf(player.getScore()));
 
         //Checks numbers are not the same
         while (randB == randA) {
@@ -122,12 +121,14 @@ public class SelectQuestionScreen extends AppCompatActivity {
     }
 
     public void goToCheatSelect(View v){
-        Intent intent = new Intent(this, SelectCheat.class);
+        select = true;
+        Intent intent = new Intent(this, CheatPage.class);
         startActivity(intent);
     }
 
     public void goToSkipSelect(View v){
         Intent intent = new Intent(this, SelectQuestions.class);
+        startActivity(intent);
     }
 
 }

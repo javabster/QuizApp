@@ -12,10 +12,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
-import static am.app.CreatePlayer.player;
-import static am.app.CreatePlayer.player1;
 import static am.app.CreatePlayer.player2;
-import static am.app.QuestionsArray.Questions_Array;
 import static am.app.SelectQuestions.number;
 
 /*Question screen for 2 players mode.
@@ -96,6 +93,8 @@ public class QuestionScreen2 extends AppCompatActivity {
         A.setText(AnswerRandomiser.getAnswer(number, randA));
         B.setText(AnswerRandomiser.getAnswer(number, randB));
         C.setText(AnswerRandomiser.getAnswer(number, randC));
+
+        SelectQuestionScreen.select = true;
 
 
     }
@@ -215,7 +214,7 @@ public class QuestionScreen2 extends AppCompatActivity {
 
     public void goToCheatSelect(View v){
         players = players+1;
-        Intent intent = new Intent(this, SelectCheat.class);
+        Intent intent = new Intent(this, CheatPage.class);
         startActivity(intent);
     }
 

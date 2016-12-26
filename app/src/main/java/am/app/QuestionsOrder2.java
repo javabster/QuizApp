@@ -42,9 +42,9 @@ public class QuestionsOrder2 extends AppCompatActivity {
             }
         });
 
-        RadioButton A = (RadioButton) findViewById(R.id.Aa2);
-        RadioButton B = (RadioButton) findViewById(R.id.Bb2);
-        RadioButton C = (RadioButton) findViewById(R.id.Cc2);
+        RadioButton A = (RadioButton) findViewById(R.id.Aa2R);
+        RadioButton B = (RadioButton) findViewById(R.id.Bb2R);
+        RadioButton C = (RadioButton) findViewById(R.id.Cc2R);
         playerNumber = (TextView) findViewById(R.id.textView14);
         scoreview = (TextView) findViewById(R.id.textView21);
 
@@ -104,49 +104,49 @@ public class QuestionsOrder2 extends AppCompatActivity {
         if (players % 2 == 0) {
             // Check which radio button was clicked
             switch (view.getId()) {
-                case R.id.Aa2:
+                case R.id.Aa2R:
                     if (checked) {
                         if (randomA == 0) {
                             //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
                             CreatePlayer.player1.addScore(1);
                             players = players+1;
-                            Intent intentNext = new Intent(this, SelectCorrect.class);
+                            Intent intentNext = new Intent(this, RandomCorrect.class);
                             startActivity(intentNext);
                         } else {
                             players = players+1;
-                            Intent intentNext = new Intent(this, SelectIncorrect.class);
+                            Intent intentNext = new Intent(this, RandomIncorrect.class);
                             startActivity(intentNext);
                         }
                     }
                     break;
 
-                case R.id.Bb2:
+                case R.id.Bb2R:
                     if (checked) {
                         if (randomB == 0) {
                             //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
                             CreatePlayer.player1.addScore(1);
                             players = players+1;
-                            Intent intentNext = new Intent(this, SelectCorrect.class);
+                            Intent intentNext = new Intent(this, RandomCorrect.class);
                             startActivity(intentNext);
                         } else {
                             players = players+1;
-                            Intent intentNext = new Intent(this, SelectIncorrect.class);
+                            Intent intentNext = new Intent(this, RandomIncorrect.class);
                             startActivity(intentNext);
                         }
                     }
 
                     break;
-                case R.id.Cc2:
+                case R.id.Cc2R:
                     if (checked) {
                         if (randomC == 0) {
                             //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
                             CreatePlayer.player1.addScore(1);
                             players = players+1;
-                            Intent intentNext = new Intent(this, SelectCorrect.class);
+                            Intent intentNext = new Intent(this, RandomCorrect.class);
                             startActivity(intentNext);
                         } else {
                             players = players+1;
-                            Intent intentNext = new Intent(this, SelectIncorrect.class);
+                            Intent intentNext = new Intent(this, RandomIncorrect.class);
                             startActivity(intentNext);
                         }
                         break;
@@ -155,49 +155,49 @@ public class QuestionsOrder2 extends AppCompatActivity {
         } else { //for player 2
             //Checks which button was selected
             switch (view.getId()) {
-                case R.id.Aa2:
+                case R.id.Aa2R:
                     if (checked) {
                         if (randomA == 0) {
                             //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
                             player2.addScore(1);
                             players = players+1;
-                            Intent intentNext = new Intent(this, SelectCorrect.class);
+                            Intent intentNext = new Intent(this, RandomCorrect.class);
                             startActivity(intentNext);
                         } else {
                             players = players+1;
-                            Intent intentNext = new Intent(this, SelectIncorrect.class);
+                            Intent intentNext = new Intent(this, RandomIncorrect.class);
                             startActivity(intentNext);
                         }
                     }
                     break;
 
-                case R.id.Bb2:
+                case R.id.Bb2R:
                     if (checked) {
                         if (randomB == 0) {
                             //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
                             player2.addScore(1);
                             players = players+1;
-                            Intent intentNext = new Intent(this, SelectCorrect.class);
+                            Intent intentNext = new Intent(this, RandomCorrect.class);
                             startActivity(intentNext);
                         } else {
                             players = players+1;
-                            Intent intentNext = new Intent(this, SelectIncorrect.class);
+                            Intent intentNext = new Intent(this, RandomIncorrect.class);
                             startActivity(intentNext);
                         }
                     }
 
                     break;
-                case R.id.Cc2:
+                case R.id.Cc2R:
                     if (checked) {
                         if (randomC == 0) {
                             //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
                             player2.addScore(1);
                             players = players+1;
-                            Intent intentNext = new Intent(this, SelectCorrect.class);
+                            Intent intentNext = new Intent(this, RandomCorrect.class);
                             startActivity(intentNext);
                         } else {
                             players = players+1;
-                            Intent intentNext = new Intent(this, SelectIncorrect.class);
+                            Intent intentNext = new Intent(this, RandomIncorrect.class);
                             startActivity(intentNext);
                         }
                         break;
@@ -207,15 +207,15 @@ public class QuestionsOrder2 extends AppCompatActivity {
 
     }
 
-    public void goToCheatSelect(View v){
+    public void goToCheatRandom(View v){
         players = players+1;
-        Intent intent = new Intent(this, SelectCheat.class);
+        Intent intent = new Intent(this, CheatPage.class);
         startActivity(intent);
     }
 
-    public void goToSkipSelect(View v){
+    public void goToSkipRandom(View v){
         players = players+1;
-        Intent intent = new Intent(this, SelectQuestions.class);
+        Intent intent = new Intent(this, QuestionsOrder2.class);
         startActivity(intent);
     }
 }

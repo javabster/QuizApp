@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class RandomQuestionCheat extends AppCompatActivity {
 
-    public TextView answer;
+    public TextView answerCheat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +29,12 @@ public class RandomQuestionCheat extends AppCompatActivity {
             }
         });
 
-        answer = (TextView) findViewById(R.id.answer);
-        answer.setText(AnswerRandomiser.getAnswer(QuestionsOrder.randomNumber, 0));
+        answerCheat = (TextView) findViewById(R.id.answer);
+        answerCheat.setText(AnswerRandomiser.getAnswer(QuestionsOrder.randomNumber, 0));
 
     }
 
-    public void goToNextQuestion(){
+    public void goToNextQuestion(View v){
         Intent intent = new Intent(this, QuestionsOrder.class);
         startActivity(intent);
     }

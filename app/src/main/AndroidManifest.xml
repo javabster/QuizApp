@@ -117,6 +117,10 @@
             android:name=".QuestionsOrder2"
             android:label="@string/title_activity_questions_order2"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".CheatPage"
+            android:label=".SelectCheat"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

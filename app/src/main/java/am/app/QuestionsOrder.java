@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -22,6 +23,8 @@ public class QuestionsOrder extends AppCompatActivity {
     public int randomA;
     public int randomB;
     public int randomC;
+
+    private static final String TAG = "RandomQuestionScreen";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +58,7 @@ public class QuestionsOrder extends AppCompatActivity {
         TextView question = (TextView) findViewById(R.id.question_order);
         question.setText(QuestionsArray.getQuestion(randomNumber));
         TextView scoreview = (TextView) findViewById(R.id.textView20);
-        scoreview.setText(player.getScore());
+        scoreview.setText(String.valueOf(player.getScore()));
 
         randomA = (int) (Math.random() * 3);
         randomB = (int) (Math.random() * 3);
@@ -124,6 +127,7 @@ public class QuestionsOrder extends AppCompatActivity {
 
 
     public void goToNextQuestion(View view){
+        Log.d(TAG, "goToNextQuestion method reached");
         Intent intent = new Intent(this, QuestionsOrder.class);
         startActivity(intent);
     }

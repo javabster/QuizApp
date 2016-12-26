@@ -36,6 +36,8 @@ public class MainActivity extends FragmentActivity implements BlankFragment.OnFr
 
         NameInput2Players.twoPlayerMode = false;
 
+        SelectQuestionScreen.select = false;
+
 
     }
 

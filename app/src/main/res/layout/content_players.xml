@@ -18,18 +18,20 @@
         android:layout_height="wrap_content"
         android:text="@string/players1"
         android:onClick="Players1"
-        android:layout_marginBottom="110dp"
         android:elevation="0dp"
-        android:layout_above="@+id/button3"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="129dp"
+        android:textSize="24sp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/players2"
-        android:layout_marginTop="127dp"
-        android:layout_alignParentTop="true"
+        android:onClick="Players2"
+        android:layout_marginBottom="124dp"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:onClick="Players2" />
+        android:textSize="24sp" />
 
 </RelativeLayout>

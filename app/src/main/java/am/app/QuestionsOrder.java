@@ -55,7 +55,7 @@ public class QuestionsOrder extends AppCompatActivity {
 
         QuestionsArray.Questions_Array[randomNumber] = "done";
 
-        TextView question = (TextView) findViewById(R.id.question_order);
+        TextView question = (TextView) findViewById(R.id.textView22);
         question.setText(QuestionsArray.getQuestion(randomNumber));
         TextView scoreview = (TextView) findViewById(R.id.textView20);
         scoreview.setText(String.valueOf(player.getScore()));

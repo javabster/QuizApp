@@ -44,7 +44,7 @@ public class RandomCorrect extends AppCompatActivity {
             startActivity(intent);
         }
         else{
-            Intent intent = new Intent(this, QuestionsOrder2.class);
+            Intent intent = new Intent(this, QuestionsOrder.class);
             startActivity(intent);
         }
     }

@@ -47,7 +47,8 @@
         android:layout_marginStart="72dp"
         android:layout_below="@+id/textView9"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textSize="24sp" />
 
 
 </RelativeLayout>

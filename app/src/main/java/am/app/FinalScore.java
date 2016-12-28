@@ -14,8 +14,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-//Class for the final score of players
-
 public class FinalScore extends AppCompatActivity {
 
     private static String TAG = "etc";
@@ -45,19 +43,19 @@ public class FinalScore extends AppCompatActivity {
         Log.d(TAG, "arrived at score screen");
         playerAdded = true;
 
-        if (SelectQuestions.scores2player==true){ //For multiplayer
+        if (SelectQuestions.scores2player==true){
             CreatePlayer.player1.scoreToHighScorePlayer1();
             CreatePlayer.player2.scoreToHighScorePlayer2();
             finalScore = (TextView) findViewById(R.id.finalscore);
             finalScore.setText(CreatePlayer.player1.getName() + "-" + CreatePlayer.player1.scoreToString() + "\n" +
-                    CreatePlayer.player2.getName() + "-" + CreatePlayer.player2.scoreToString()); //Displays final score
-
+                    CreatePlayer.player2.getName() + "-" + CreatePlayer.player2.scoreToString());
+            //finalScore.setVisibility(View.INVISIBLE);
         }
-        else{ //For 1 player
+        else{
             CreatePlayer.player.scoreToHighScore();
             finalScore = (TextView) findViewById(R.id.finalscore);
-            finalScore.setText(CreatePlayer.player.scoreToString()); //Displays final score
-
+            finalScore.setText(CreatePlayer.player.scoreToString());
+            //finalScore2.setVisibility(View.INVISIBLE);
         }
 
 

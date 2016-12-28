@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -28,6 +29,8 @@ public class QuestionsOrder2 extends AppCompatActivity {
     public int randomB;
     public int randomC;
 
+    private static final String TAG = "RandomQuestionScreen2";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,14 +47,19 @@ public class QuestionsOrder2 extends AppCompatActivity {
             }
         });
 
+        Log.d(TAG, "On(Create) bundle called");
+
         RadioButton A = (RadioButton) findViewById(R.id.Aa2R);
         RadioButton B = (RadioButton) findViewById(R.id.Bb2R);
         RadioButton C = (RadioButton) findViewById(R.id.Cc2R);
         playerNumber = (TextView) findViewById(R.id.textView14);
         scoreview = (TextView) findViewById(R.id.textView21);
+        SelectQuestions.scores2player = true; //used to display 2 players scores on FinalScore page
 
 
         randomNumber = (int)(Math.random()*10);
+
+        Log.d(TAG, "random number generated");
 
         //checks which player is answering the question
         // If the number is even, then player 1 is playing
@@ -67,11 +75,15 @@ public class QuestionsOrder2 extends AppCompatActivity {
             scoreview.setText(String.valueOf(CreatePlayer.player2.getScore()));
         }
 
+        Log.d(TAG, "Player name and score set");
+
         while (QuestionsArray.Questions_Array[randomNumber] == "done"){
             randomNumber = ((int)(Math.random()*10));     //checks if array at random index number
         }
 
         QuestionsArray.Questions_Array[randomNumber] = "done";
+
+        Log.d(TAG, "Questions_Array value set to done");
 
         TextView question = (TextView) findViewById(R.id.textView13);
         question.setText(QuestionsArray.getQuestion(randomNumber));

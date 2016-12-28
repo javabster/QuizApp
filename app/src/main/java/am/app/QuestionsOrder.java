@@ -13,6 +13,8 @@ import android.widget.TextView;
 
 import static am.app.CreatePlayer.player;
 
+//Class for random questions in 1 player mode
+
 public class QuestionsOrder extends AppCompatActivity {
 
     public TextView question;
@@ -47,21 +49,22 @@ public class QuestionsOrder extends AppCompatActivity {
         RadioButton C = (RadioButton) findViewById(R.id.Cc);
 
 
-        randomNumber = (int)(Math.random()*10);
+        randomNumber = (int)(Math.random()*10); //This will determine which question will be chosen
 
+        //If the question at that index has been done, it makes another random number
         while (QuestionsArray.Questions_Array[randomNumber] == "done"){
-            randomNumber = ((int)(Math.random()*10));     //checks if array at random index number
+            randomNumber = ((int)(Math.random()*10));
         }
 
-        QuestionsArray.Questions_Array[randomNumber] = "done";
+        QuestionsArray.Questions_Array[randomNumber] = "done"; //Marks the question as "done"
 
         TextView question = (TextView) findViewById(R.id.textView22);
-        question.setText(QuestionsArray.getQuestion(randomNumber));
+        question.setText(QuestionsArray.getQuestion(randomNumber)); //Gets the question at given index
         TextView scoreview = (TextView) findViewById(R.id.textView20);
         scoreview.setText(String.valueOf(player.getScore()));
 
-        randomA = (int) (Math.random() * 3);
-        randomB = (int) (Math.random() * 3);
+        randomA = (int) (Math.random() * 3); //Assigns random number to randomA
+        randomB = (int) (Math.random() * 3); //Assigns random number to randomB
 
         //Checks numbers are not the same
         while (randomB == randomA) {
@@ -90,12 +93,20 @@ public class QuestionsOrder extends AppCompatActivity {
         switch(view.getId()) {
             case R.id.Aa:
                 if (checked){
-                    if (randomA == 0){  //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be calle
-                        player.addScore(1);
+                    if (randomA == 0){
+
+                        /*case 0 in Answer Randomiser is always the correct answer,
+                        so if button A was checked and A displays the correct answer,
+                        the goToCorrect method will be called*/
+
+                        player.addScore(1); // If correct, adds 1 to the player's score
                         Intent intent = new Intent(this, RandomCorrect.class);
                         startActivity(intent);}
-                    else {Intent intent = new Intent(this, RandomIncorrect.class);
-                        startActivity(intent);}}
+                    else {
+                        Intent intent = new Intent(this, RandomIncorrect.class);
+                        startActivity(intent);
+                    }
+                }
                 break;
             case R.id.Bb:
                 if (checked) {
@@ -106,7 +117,8 @@ public class QuestionsOrder extends AppCompatActivity {
                     } else {
                         Intent intent = new Intent(this, RandomIncorrect.class);
                         startActivity(intent);
-                    }}
+                    }
+                }
                 break;
             case R.id.Cc:
                 if (checked) {
@@ -125,18 +137,20 @@ public class QuestionsOrder extends AppCompatActivity {
 
     }
 
-
+    //Gets the next question, repeats what has just been done
     public void goToNextQuestion(View view){
         Log.d(TAG, "goToNextQuestion method reached");
         Intent intent = new Intent(this, QuestionsOrder.class);
         startActivity(intent);
     }
 
+    //Cheat button was picked
     public void goToCheat(View view){
         Intent intent = new Intent(this, RandomQuestionCheat.class);
         startActivity(intent);
     }
 
+    //Goes to score
     public void goToScore(View view){
         Intent intent = new Intent(this, FinalScore.class);
         startActivity(intent);

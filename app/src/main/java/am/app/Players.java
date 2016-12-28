@@ -9,6 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+//Class for activity where the user chooses between 1 and 2 player mode
+
 public class Players extends AppCompatActivity {
 
     @Override
@@ -31,14 +33,14 @@ public class Players extends AppCompatActivity {
 
 
 
-    public void Players1(View v){
+    public void Players1(View v){ //For 1 player mode
         CreatePlayer.player.setScore(0);
         Intent intent = new Intent(this, NameInput.class);
         startActivity(intent);
 
     }
 
-    public void Players2(View v){
+    public void Players2(View v){ //For 2 player mode
         CreatePlayer.player1.setScore(0);
         CreatePlayer.player2.setScore(0);
         Intent intent = new Intent(this, NameInput2Players.class);

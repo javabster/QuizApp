@@ -10,6 +10,10 @@ import android.view.View;
 
 import static am.app.NameInput2Players.twoPlayerMode;
 
+/*Class for QuestionMethod activity,
+where the user chooses between random questions,
+or the option to select the questions*/
+
 public class QuestionMethod extends AppCompatActivity {
 
     @Override
@@ -30,17 +34,21 @@ public class QuestionMethod extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+    //For random questions
     public void RandomQuestions(View v){
-        if (NameInput2Players.twoPlayerMode == true) {
+        if (NameInput2Players.twoPlayerMode == true) { //For 2 player mode
             Intent intent = new Intent(this, QuestionsOrder2.class);
             startActivity(intent);
         }
-        else{
+        else{ //for this statement, twoPlayerMode == false, so it is for 1 player
             Intent intent = new Intent(this, QuestionsOrder.class);
             startActivity(intent);
         }
     }
 
+    /*For selecting questions
+    * In this case, regardless of the number of players,
+    * the user is sent to the SelectQuestions activity*/
     public void SelectQuestions(View v){
         Intent intent = new Intent(this, SelectQuestions.class);
         startActivity(intent);

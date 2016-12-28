@@ -9,20 +9,21 @@ import java.lang.reflect.Array;
  * Created by abbymitchell on 04/12/2016.
  */
 
+//Class for Player (defines the object)
+
 public class Player implements Comparable<Player> {
 
     public String name;
     public int score;
     public int randomPlace;
     public int randomPlace2;
-    //Player player = new Player();
-    //public Player player1 = new Player();
-    //public Player player2 = new Player();
+
 
     private SharedPreferences HSc;
     public static final String H_SC = "High Score";
 
     public Player(){
+        //Initially, the player has no name or score
         name = "null";
         score = 0;
     }

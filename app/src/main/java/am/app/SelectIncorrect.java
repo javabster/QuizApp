@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+//Class for incorrect answers in select mode
+
 public class SelectIncorrect extends AppCompatActivity {
 
     @Override
@@ -27,7 +29,7 @@ public class SelectIncorrect extends AppCompatActivity {
         });
     }
 
-
+    //Goes to the question selection activity
     public void getNextQuestion(View view){
 
             Intent intentAfter = new Intent(this, SelectQuestions.class);

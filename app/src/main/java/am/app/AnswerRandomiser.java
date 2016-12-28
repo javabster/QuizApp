@@ -4,11 +4,15 @@ package am.app;
  * Created by abbymitchell on 10/12/2016.
  */
 
+
+//Class randomly assigns each answer button with one of the possible answers for each question
+
 public class AnswerRandomiser {
 
 
     public static String getAnswer(int randomnumber, int randomnumberX) {
         switch (randomnumber) {
+            //Each case refers to a question (i.e. 0 for question 1; 1 for question 2; etc...)
             case 0:
                 switch (randomnumberX) {
                     case 0:

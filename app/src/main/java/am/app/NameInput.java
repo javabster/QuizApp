@@ -12,9 +12,11 @@ import android.widget.EditText;
 
 import java.util.Scanner;
 
+//Class for setting the name of the player in 1 player mode
+
 public class NameInput extends AppCompatActivity {
 
-    //private Button GoButton;
+
     private EditText NameInput;
 
     @Override
@@ -34,17 +36,16 @@ public class NameInput extends AppCompatActivity {
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //GoButton = (Button) findViewById(R.id.gobutton); //finding button in the other xml file
-        NameInput = (EditText) findViewById(R.id.enter_name);
+        NameInput = (EditText) findViewById(R.id.enter_name); //NameInput becomes the name typed by user
 
 
 
     }
 
     public void SelectQuestionMethod(View v){
-        NameInput2Players.twoPlayerMode=false;
-        CreatePlayer.player.setName(NameInput.getText().toString());
-        Intent intent = new Intent(this, QuestionMethod.class);
+        NameInput2Players.twoPlayerMode=false; //boolean variable used to differentiate between 1 and 2 player mode
+        CreatePlayer.player.setName(NameInput.getText().toString()); //Creates player and sets name
+        Intent intent = new Intent(this, QuestionMethod.class); //Goes to QuestionMethod activity
         startActivity(intent);
 
     };

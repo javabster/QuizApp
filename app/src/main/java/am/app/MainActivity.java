@@ -7,8 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-
-
+//Class for initial page
 
 public class MainActivity extends FragmentActivity implements BlankFragment.OnFragmentInteractionListener {
 
@@ -23,6 +22,7 @@ public class MainActivity extends FragmentActivity implements BlankFragment.OnFr
         if (FinalScore.playerAdded != true)
             HighScoreArray.arraySetValues();
 
+        //Initially, all the attempts are empty/false
         SelectQuestions.question1attempt = false;
         SelectQuestions.question2attempt = false;
         SelectQuestions.question3attempt = false;
@@ -41,12 +41,12 @@ public class MainActivity extends FragmentActivity implements BlankFragment.OnFr
 
     }
 
-    public void Players(View v){
+    public void Players(View v){ //Goes to Players, user chooses to play the game
         Intent intent = new Intent(this, Players.class);
         startActivity(intent);
     }
 
-    public void HighScores(View v){
+    public void HighScores(View v){ //Goes to HighScores, user chooses to see the high scores
         Intent intent = new Intent(this, HighScores.class);
         startActivity(intent);
     }

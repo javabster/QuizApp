@@ -9,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
+//Class for cheat answers
+
 public class CheatPage extends AppCompatActivity {
 
     public TextView answer;
@@ -29,38 +31,38 @@ public class CheatPage extends AppCompatActivity {
             }
         });
 
-        if (SelectQuestionScreen.select == true){
+        if (SelectQuestionScreen.select == true){ //Cheat for Select Questions Mode
         TextView answer = (TextView) findViewById(R.id.cheat_answer);
-        answer.setText(AnswerRandomiser.getAnswer(SelectQuestions.number, 0));}
+        answer.setText(AnswerRandomiser.getAnswer(SelectQuestions.number, 0));} //Displays answer
 
-        else if (NameInput2Players.twoPlayerMode == true){
+        else if (NameInput2Players.twoPlayerMode == true){ //Random Questions multiplayer
             TextView answer = (TextView) findViewById(R.id.cheat_answer);
             answer.setText(AnswerRandomiser.getAnswer(QuestionsOrder2.randomNumber, 0));
         }
         else{
-            TextView answer = (TextView) findViewById(R.id.cheat_answer);
+            TextView answer = (TextView) findViewById(R.id.cheat_answer); //Random Questions 1 player
             answer.setText(AnswerRandomiser.getAnswer(QuestionsOrder.randomNumber, 0));
         }
 
     }
 
-
+    //Goes to next question
     public void goToNext(View v){
 
-        if (SelectQuestionScreen.select == true && NameInput2Players.twoPlayerMode != true){
-            Intent intent = new Intent(this, SelectQuestions.class);
+        if (SelectQuestionScreen.select == true && NameInput2Players.twoPlayerMode != true){ //multiplayer
+            Intent intent = new Intent(this, SelectQuestions.class); //Goes to Select Questions activity
             startActivity(intent);
         }
-        else if (SelectQuestionScreen.select != true && NameInput2Players.twoPlayerMode == true){
-            Intent intent = new Intent(this, QuestionsOrder2.class);
+        else if (SelectQuestionScreen.select != true && NameInput2Players.twoPlayerMode == true){ //multiplayer
+            Intent intent = new Intent(this, QuestionsOrder2.class); //Random Question mode
             startActivity(intent);
         }
-        else if (SelectQuestionScreen.select != true && NameInput2Players.twoPlayerMode != true){
-            Intent intent = new Intent(this, QuestionsOrder.class);
+        else if (SelectQuestionScreen.select != true && NameInput2Players.twoPlayerMode != true){ //1 player
+            Intent intent = new Intent(this, QuestionsOrder.class); //Random Question mode
             startActivity(intent);
         }
-        else if (SelectQuestionScreen.select == true && NameInput2Players.twoPlayerMode == true){
-            Intent intent = new Intent(this, SelectQuestions.class);
+        else if (SelectQuestionScreen.select == true && NameInput2Players.twoPlayerMode == true){ //1 player
+            Intent intent = new Intent(this, SelectQuestions.class); //Goes to Select Questions activity
             startActivity(intent);}
     }
 

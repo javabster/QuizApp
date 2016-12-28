@@ -13,6 +13,8 @@ import android.widget.TextView;
 import static am.app.CreatePlayer.player2;
 import static am.app.QuestionScreen2.players;
 
+//Class for random questions in 2 player mode
+
 public class QuestionsOrder2 extends AppCompatActivity {
 
     public TextView question;
@@ -52,12 +54,13 @@ public class QuestionsOrder2 extends AppCompatActivity {
         randomNumber = (int)(Math.random()*10);
 
         //checks which player is answering the question
+        // If the number is even, then player 1 is playing
         if (players % 2 == 0) {
             //Tells who is playing
             playerNumber.setText(CreatePlayer.player1.getName());
             //Displays the score for player 1
             scoreview.setText(String.valueOf(CreatePlayer.player1.getScore()));
-        } else {
+        } else { //players variable is odd, player 2 is playing
             //Tells who is playing
             playerNumber.setText(CreatePlayer.player2.getName());
             //Displays the score for player 2
@@ -74,8 +77,8 @@ public class QuestionsOrder2 extends AppCompatActivity {
         question.setText(QuestionsArray.getQuestion(randomNumber));
 
 
-        randomA = (int) (Math.random() * 3);
-        randomB = (int) (Math.random() * 3);
+        randomA = (int) (Math.random() * 3); //Assigns random number to randomA
+        randomB = (int) (Math.random() * 3); //Assigns random number to randomB
 
         //Checks numbers are not the same
         while (randomB == randomA) {
@@ -107,9 +110,11 @@ public class QuestionsOrder2 extends AppCompatActivity {
                 case R.id.Aa2R:
                     if (checked) {
                         if (randomA == 0) {
-                            //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
-                            CreatePlayer.player1.addScore(1);
-                            players = players+1;
+                            /*case 0 in Answer Randomiser is always the correct answer,
+                            so if button A was checked and A displays the correct answer,
+                            the goToCorrect method will be called*/
+                            CreatePlayer.player1.addScore(1);//Adds 1 to the score
+                            players = players+1; //Adds 1 to the players variable, so that next question, player 2 plays
                             Intent intentNext = new Intent(this, RandomCorrect.class);
                             startActivity(intentNext);
                         } else {
@@ -123,7 +128,6 @@ public class QuestionsOrder2 extends AppCompatActivity {
                 case R.id.Bb2R:
                     if (checked) {
                         if (randomB == 0) {
-                            //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
                             CreatePlayer.player1.addScore(1);
                             players = players+1;
                             Intent intentNext = new Intent(this, RandomCorrect.class);
@@ -139,7 +143,6 @@ public class QuestionsOrder2 extends AppCompatActivity {
                 case R.id.Cc2R:
                     if (checked) {
                         if (randomC == 0) {
-                            //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
                             CreatePlayer.player1.addScore(1);
                             players = players+1;
                             Intent intentNext = new Intent(this, RandomCorrect.class);
@@ -153,12 +156,10 @@ public class QuestionsOrder2 extends AppCompatActivity {
                     }
             }
         } else { //for player 2
-            //Checks which button was selected
             switch (view.getId()) {
                 case R.id.Aa2R:
                     if (checked) {
                         if (randomA == 0) {
-                            //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
                             player2.addScore(1);
                             players = players+1;
                             Intent intentNext = new Intent(this, RandomCorrect.class);
@@ -174,7 +175,6 @@ public class QuestionsOrder2 extends AppCompatActivity {
                 case R.id.Bb2R:
                     if (checked) {
                         if (randomB == 0) {
-                            //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
                             player2.addScore(1);
                             players = players+1;
                             Intent intentNext = new Intent(this, RandomCorrect.class);
@@ -190,7 +190,6 @@ public class QuestionsOrder2 extends AppCompatActivity {
                 case R.id.Cc2R:
                     if (checked) {
                         if (randomC == 0) {
-                            //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
                             player2.addScore(1);
                             players = players+1;
                             Intent intentNext = new Intent(this, RandomCorrect.class);
@@ -207,15 +206,17 @@ public class QuestionsOrder2 extends AppCompatActivity {
 
     }
 
+    //Goes to cheat
     public void goToCheatRandom(View v){
-        players = players+1;
+        players = players+1; //Adds 1 to the players variable, so that next question, player 2 plays
         Intent intent = new Intent(this, CheatPage.class);
         startActivity(intent);
     }
 
+    //If the question is skipped
     public void goToSkipRandom(View v){
-        players = players+1;
-        Intent intent = new Intent(this, QuestionsOrder2.class);
+        players = players+1; //Adds 1 to the players variable, so that next question, player 2 plays
+        Intent intent = new Intent(this, QuestionsOrder2.class); //repeats what was done in this class
         startActivity(intent);
     }
 }

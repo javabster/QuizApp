@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+//Class for correct answers for select mode
+
 public class SelectCorrect extends AppCompatActivity {
 
     @Override
@@ -28,7 +30,7 @@ public class SelectCorrect extends AppCompatActivity {
     }
 
 
-
+    //Goes to the question selection activity
     public void getNextQuestion(View view){
 
             Intent intentAfter = new Intent(this, SelectQuestions.class);

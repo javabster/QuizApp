@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import java.util.Arrays;
 
+//Class for displaying the high scores
+
 public class HighScores extends AppCompatActivity {
 
     public TextView highscores;

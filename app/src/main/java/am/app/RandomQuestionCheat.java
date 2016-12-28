@@ -9,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
+//Cheat class for random question mode
+
 public class RandomQuestionCheat extends AppCompatActivity {
 
     public TextView answerCheat;
@@ -30,10 +32,11 @@ public class RandomQuestionCheat extends AppCompatActivity {
         });
 
         answerCheat = (TextView) findViewById(R.id.answer);
-        answerCheat.setText(AnswerRandomiser.getAnswer(QuestionsOrder.randomNumber, 0));
+        answerCheat.setText(AnswerRandomiser.getAnswer(QuestionsOrder.randomNumber, 0)); //Displays answer
 
     }
 
+    //Goes to next question
     public void goToNextQuestion(View v){
         Intent intent = new Intent(this, QuestionsOrder.class);
         startActivity(intent);

@@ -20,6 +20,8 @@ import static am.app.QuestionsArray.Questions_Array;
 import static android.R.attr.contentDescription;
 import static android.R.attr.value;
 
+//Class for question selection, both single and 2 player mode
+
 public class SelectQuestions extends AppCompatActivity {
     private static String TAG = "SelectQuestions1";
     public static int number;
@@ -67,7 +69,7 @@ public class SelectQuestions extends AppCompatActivity {
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
+        //Each button from the screen is given a new name
         button1 = (Button) findViewById(R.id.button4);
         button2 = (Button) findViewById(R.id.button5);
         button3 = (Button) findViewById(R.id.button6);
@@ -114,18 +116,19 @@ public class SelectQuestions extends AppCompatActivity {
 
     }
 
+    //Methods for the selection of questions
 
     public void SelectQuestion1(View v){
         Log.d(TAG, "select q1 method called");
-        number = 0;
-        question1attempt=true;
-        //Checks if the two players in multiplayer mode have names (i.e. exist); same in each method
+        number = 0; //It will return the question at index 0 from the Questions_Array
+        question1attempt=true; //The question has now been attempted, the button will disappear
+        //Checks if the game is in two player mode
         if (NameInput2Players.twoPlayerMode == true) {
             Intent intent2 = new Intent(this, QuestionScreen2.class); //Goes to multiplayer mode
             startActivity(intent2);
         }
-        //Checks if the individual player has a name (i.e. exists); same in each method
-        else {
+
+        else { //for 1 player mode
             Intent intent = new Intent(this, SelectQuestionScreen.class);//Goes to single player mode
             startActivity(intent);
         }
@@ -250,13 +253,14 @@ public class SelectQuestions extends AppCompatActivity {
         }
     }
 
+    //If the "Go to Score" button is selected, it will go to the FinalScore activity
     public void GoToScore(View v){
-        if (NameInput2Players.twoPlayerMode == true){
+        if (NameInput2Players.twoPlayerMode == true){ //for 2 player mode
             scores2player = true;
         }
-        else scores2player = false;
+        else scores2player = false; //For 1 player mode
 
-        Intent intent = new Intent (this, FinalScore.class);
+        Intent intent = new Intent (this, FinalScore.class); //Goes to final score activity
         startActivity(intent);
     }
 

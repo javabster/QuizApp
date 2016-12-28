@@ -14,6 +14,8 @@ import android.widget.RadioButton;
 import static am.app.CreatePlayer.player;
 import static am.app.SelectQuestions.number;
 
+//Class for the select question screen in 1 player mode
+
 public class SelectQuestionScreen extends AppCompatActivity {
     private static final String TAG = "SelectQuestionScreen";
 
@@ -40,15 +42,21 @@ public class SelectQuestionScreen extends AppCompatActivity {
         });
 
         Log.d(TAG, "arrived at 1 player select question screen");
+
+        //Assigns a new name to each view on the content screen
+
         TextView textview = (TextView) findViewById(R.id.textView3);
         RadioButton A = (RadioButton) findViewById(R.id.radioButtonA);
         RadioButton B = (RadioButton) findViewById(R.id.radioButtonB);
         RadioButton C = (RadioButton) findViewById(R.id.radioButtonC);
+
         textview.setText(QuestionsArray.getQuestion(number)); //displays question 1 after the player has chosen it.
-        randA = (int) (Math.random() * 3);
-        randB = (int) (Math.random() * 3);
+
+        randA = (int) (Math.random() * 3); //Assigns random number to randA
+        randB = (int) (Math.random() * 3); //Assigns random number to randB
+
         TextView scoreview = (TextView) findViewById(R.id.textView5);
-        scoreview.setText(String.valueOf(player.getScore()));
+        scoreview.setText(String.valueOf(player.getScore())); //Displays score
 
         //Checks numbers are not the same
         while (randB == randA) {
@@ -74,17 +82,22 @@ public class SelectQuestionScreen extends AppCompatActivity {
 
         boolean checked = ((RadioButton) view).isChecked();
 
-        // Check which radio button was clicked
+        // Checks which radio button was clicked
         switch(view.getId()) {
             case R.id.radioButtonA:
                 if (checked){
-                    if (randA == 0) {  //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
-                        player.addScore(1);
-                        Intent intentNext = new Intent (this, SelectCorrect.class);
+                    if (randA == 0) {
+
+                        /*case 0 in Answer Randomiser is always the correct answer,
+                        so if button A was checked and A displays the correct answer,
+                        the goToCorrect method will be called*/
+
+                        player.addScore(1); //Adds 1 to the score if correct
+                        Intent intentNext = new Intent (this, SelectCorrect.class); //Goes to the SelectCorrect screen
                         startActivity(intentNext);
                     }
                     else {
-                        Intent intentNext = new Intent (this, SelectIncorrect.class);
+                        Intent intentNext = new Intent (this, SelectIncorrect.class); //Goes to SelectIncorrect screen
                         startActivity(intentNext);
                     }
                     }
@@ -92,7 +105,7 @@ public class SelectQuestionScreen extends AppCompatActivity {
 
             case R.id.radioButtonB:
                 if (checked){
-                if (randB == 0) {  //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
+                if (randB == 0) {
                     player.addScore(1);
                     Intent intentNext = new Intent (this, SelectCorrect.class);
                     startActivity(intentNext);
@@ -105,7 +118,7 @@ public class SelectQuestionScreen extends AppCompatActivity {
                 break;
             case R.id.radioButtonC:
                 if (checked){
-                if (randC == 0) {  //case 0 in Answer Randomiser is always the correct answer, so if button A was checked and A displays the correct answer, the goToCorrect method will be called
+                if (randC == 0) {
                     player.addScore(1);
                     Intent intentNext = new Intent (this, SelectCorrect.class);
                     startActivity(intentNext);
@@ -120,12 +133,14 @@ public class SelectQuestionScreen extends AppCompatActivity {
 
     }
 
+    //Cheat method, goes to cheat page
     public void goToCheatSelect(View v){
-        select = true;
+        select = true; //Means that the cheat button has been selected
         Intent intent = new Intent(this, CheatPage.class);
         startActivity(intent);
     }
 
+    //Skips the question, goes back to question selection page
     public void goToSkipSelect(View v){
         Intent intent = new Intent(this, SelectQuestions.class);
         startActivity(intent);

@@ -38,6 +38,8 @@ public class MainActivity extends FragmentActivity implements BlankFragment.OnFr
 
         SelectQuestionScreen.select = false;
 
+        QuestionsArray.Enter_String_Name();
+
 
     }
 

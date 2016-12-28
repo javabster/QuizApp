@@ -41,7 +41,7 @@ public class FinalScore extends AppCompatActivity {
         });
 
         Log.d(TAG, "arrived at score screen");
-        playerAdded = true;
+        playerAdded = true; //used later on so select question buttons reappear if a new game is started with a new player
 
         if (SelectQuestions.scores2player==true){
             CreatePlayer.player1.scoreToHighScorePlayer1();
@@ -49,13 +49,13 @@ public class FinalScore extends AppCompatActivity {
             finalScore = (TextView) findViewById(R.id.finalscore);
             finalScore.setText(CreatePlayer.player1.getName() + "-" + CreatePlayer.player1.scoreToString() + "\n" +
                     CreatePlayer.player2.getName() + "-" + CreatePlayer.player2.scoreToString());
-            //finalScore.setVisibility(View.INVISIBLE);
+
         }
         else{
             CreatePlayer.player.scoreToHighScore();
             finalScore = (TextView) findViewById(R.id.finalscore);
             finalScore.setText(CreatePlayer.player.scoreToString());
-            //finalScore2.setVisibility(View.INVISIBLE);
+
         }
 
 

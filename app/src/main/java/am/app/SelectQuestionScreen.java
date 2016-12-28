@@ -14,7 +14,7 @@ import android.widget.RadioButton;
 import static am.app.CreatePlayer.player;
 import static am.app.SelectQuestions.number;
 
-//Class for the select question screen in 1 player mode
+//Class for the select question screen in single player mode
 
 public class SelectQuestionScreen extends AppCompatActivity {
     private static final String TAG = "SelectQuestionScreen";

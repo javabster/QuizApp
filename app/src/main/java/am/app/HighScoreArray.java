@@ -9,8 +9,8 @@ import java.util.Arrays;
 //Class for the high score array of the game
 
 public class HighScoreArray {
-    public static Player[] High_Scores = new Player[10]; //Board displays top 10 players
-    public static String[] High_Scores_Strings = new String[10];
+    public static Player[] High_Scores = new Player[10]; //array of players
+    public static String[] High_Scores_Strings = new String[10]; //array of string values corresponding to each player (format: name - score)
 
 
     public static void arraySetValues(){
@@ -27,7 +27,7 @@ public class HighScoreArray {
 
 
 
-
+    //converts player array values to strings using scoreToString method from Player class then assigns them to a string array
     public static void arrayToString(){
         for (int index = 0; index<High_Scores.length; index++){
             High_Scores_Strings[index] = High_Scores[index].ScoreToString();

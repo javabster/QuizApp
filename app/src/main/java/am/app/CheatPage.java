@@ -46,7 +46,7 @@ public class CheatPage extends AppCompatActivity {
 
     }
 
-    //Goes to next question
+    //Goes to next question, depending on if a)one or two player and b)if it is select questions or random questions
     public void goToNext(View v){
 
         if (SelectQuestionScreen.select == true && NameInput2Players.twoPlayerMode != true){ //multiplayer

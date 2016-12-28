@@ -33,11 +33,12 @@ public class HighScores extends AppCompatActivity {
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        Arrays.sort(HighScoreArray.High_Scores);
-        HighScoreArray.arrayToString();
+        Arrays.sort(HighScoreArray.High_Scores); //sorts high score array using compareTo method in Player class
+        HighScoreArray.arrayToString(); //converts player array to string array
 
         highscores = (TextView) findViewById(R.id.HighScores);
 
+        //displays high scores in list
         highscores.setText("1:  " + HighScoreArray.High_Scores_Strings[0] + "\n2:  " + HighScoreArray.High_Scores_Strings[1]
          + "\n3:  " + HighScoreArray.High_Scores_Strings[2] + "\n4:  " + HighScoreArray.High_Scores_Strings[3] + "\n5:  "
                 + HighScoreArray.High_Scores_Strings[4] + "\n6:  " + HighScoreArray.High_Scores_Strings[5] + "\n7:  " +

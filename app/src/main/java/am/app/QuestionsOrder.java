@@ -146,15 +146,10 @@ public class QuestionsOrder extends AppCompatActivity {
 
     //Cheat button was picked
     public void goToCheat(View view){
-        Intent intent = new Intent(this, RandomQuestionCheat.class);
+        Intent intent = new Intent(this, CheatPage.class);
         startActivity(intent);
     }
 
-    //Goes to score
-    public void goToScore(View view){
-        Intent intent = new Intent(this, FinalScore.class);
-        startActivity(intent);
-    }
 
 
 }

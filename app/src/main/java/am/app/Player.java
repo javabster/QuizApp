@@ -55,26 +55,22 @@ public class Player implements Comparable<Player> {
         score = score + addition;
     }
 
-    public void minusScore(int subtraction){
-        score = score - subtraction;
-    }
-
     public String scoreToString(){
         return (Integer.toString(score));
     }
 
     public void scoreToHighScore(){
-        randomPlace = (int)(Math.random()*10);
-        Player highScorePlayer = new Player(CreatePlayer.player);
+        randomPlace = (int)(Math.random()*10); //generates random number between 0 and 10
+        Player highScorePlayer = new Player(CreatePlayer.player); //copy of player created
 
 
-        while(HighScoreArray.High_Scores[randomPlace] != CreatePlayer.defaultPlayer){
-            randomPlace=(int)(Math.random()*10);}
+        while(HighScoreArray.High_Scores[randomPlace] != CreatePlayer.defaultPlayer){ //if place in array taken by a previous player's scores,
+            randomPlace=(int)(Math.random()*10);}                                     // a different array place numebr is generates
 
-        HighScoreArray.High_Scores[randomPlace] = highScorePlayer;
+        HighScoreArray.High_Scores[randomPlace] = highScorePlayer; //copied player assigned to randomly generated place number
     }
 
-    public void scoreToHighScorePlayer1(){
+    public void scoreToHighScorePlayer1(){ //same as above method, for player 1 of multiplayer
         Player highScorePlayer1 = new Player(CreatePlayer.player1);
         randomPlace = (int)(Math.random()*10);
 
@@ -84,7 +80,7 @@ public class Player implements Comparable<Player> {
         HighScoreArray.High_Scores[randomPlace] = highScorePlayer1;
     }
 
-    public void scoreToHighScorePlayer2(){
+    public void scoreToHighScorePlayer2(){ //same as above method, for player 2 of multiplayer
         Player highScorePlayer2 = new Player(CreatePlayer.player2);
         randomPlace = (int)(Math.random()*10);
 
@@ -96,18 +92,18 @@ public class Player implements Comparable<Player> {
     }
 
 
-    public String ScoreToString(){
+    public String ScoreToString(){ //assigns player data name and score to string value
         return (name + "\t-\t" + score);
     }
 
     @Override
-    public int compareTo(Player comparePlayer) {
+    public int compareTo(Player comparePlayer) { //compares player scores for high scores array
         int compareScore = ((Player) comparePlayer).getScore();
         return compareScore - this.score;
 
     }
 
-    public Player(Player aPlayer){
+    public Player(Player aPlayer){ //copy constructor
         name = aPlayer.name;
         score = aPlayer.score;
     }

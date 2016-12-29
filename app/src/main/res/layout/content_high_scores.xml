@@ -13,10 +13,22 @@
     tools:context="am.app.HighScores"
     tools:showIn="@layout/activity_high_scores">
 
+
+    <TextView
+        android:text = "HIGH SCORES:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="36sp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/HighScores"/>
+        android:id="@+id/HighScores"
+        android:textSize="24sp"
+        android:textAlignment="textStart"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
 
 
 

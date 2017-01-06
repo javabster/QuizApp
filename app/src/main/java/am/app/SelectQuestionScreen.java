@@ -135,7 +135,7 @@ public class SelectQuestionScreen extends AppCompatActivity {
 
     //Cheat method, goes to cheat page
     public void goToCheatSelect(View v){
-        select = true; //Means that the cheat button has been selected
+        select = true; //Created to differentiate between select and random mode, used in cheat page
         Intent intent = new Intent(this, CheatPage.class);
         startActivity(intent);
     }

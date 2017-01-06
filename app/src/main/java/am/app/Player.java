@@ -16,7 +16,6 @@ public class Player implements Comparable<Player> {
     public String name;
     public int score;
     public int randomPlace;
-    public int randomPlace2;
 
 
     private SharedPreferences HSc;

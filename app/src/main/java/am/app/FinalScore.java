@@ -14,7 +14,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-public class FinalScore extends AppCompatActivity {
+public class SFinalScore extends AppCompatActivity {
 
     private static String TAG = "etc";
     public TextView finalScore;

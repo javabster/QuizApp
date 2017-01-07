@@ -9,7 +9,7 @@ import android.view.View;
 
 //Class for initial page
 
-public class MainActivity extends FragmentActivity implements BlankFragment.OnFragmentInteractionListener {
+public class MainActivity extends FragmentActivity implements BlankFragment.OnFragmentInteractionListener { //adds fragment to main activity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +59,7 @@ public class MainActivity extends FragmentActivity implements BlankFragment.OnFr
         startActivity(intent);
     }
 
+    //enables interaction with fragment, is blank because our fragment only displays text
     @Override
     public void onFragmentInteraction(Uri uri) {
 

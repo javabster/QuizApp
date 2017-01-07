@@ -38,7 +38,7 @@ public class HighScores extends AppCompatActivity {
 
         highscores = (TextView) findViewById(R.id.HighScores);
 
-        //displays high scores in list
+        //displays high scores as strings in list
         highscores.setText("1:  " + HighScoreArray.High_Scores_Strings[0] + "\n2:  " + HighScoreArray.High_Scores_Strings[1]
          + "\n3:  " + HighScoreArray.High_Scores_Strings[2] + "\n4:  " + HighScoreArray.High_Scores_Strings[3] + "\n5:  "
                 + HighScoreArray.High_Scores_Strings[4] + "\n6:  " + HighScoreArray.High_Scores_Strings[5] + "\n7:  " +

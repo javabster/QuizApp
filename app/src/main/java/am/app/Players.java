@@ -33,6 +33,8 @@ public class Players extends AppCompatActivity {
 
 
 
+    //sets initial scores of players to 0 and sends user to next activity:
+
     public void Players1(View v){ //For 1 player mode
         CreatePlayer.player.setScore(0);
         Intent intent = new Intent(this, NameInput.class);

@@ -13,8 +13,7 @@ import android.widget.EditText;
 
 public class NameInput2Players extends AppCompatActivity {
 
-    private static EditText NameInput1;
-    private static EditText NameInput2;
+
     public static String Name1;
     public static String Name2;
     public static boolean twoPlayerMode = false;

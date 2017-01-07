@@ -14,7 +14,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-public class SFinalScore extends AppCompatActivity {
+public class FinalScore extends AppCompatActivity {
 
     private static String TAG = "etc";
     public TextView finalScore;
@@ -41,21 +41,24 @@ public class SFinalScore extends AppCompatActivity {
         });
 
         Log.d(TAG, "arrived at score screen");
+
+        //registers that at least one player has played the app
         playerAdded = true;
 
+        //displays final scores according to whether game is 1 player or 2 player mode. also stores scores in highscores array
         if (SelectQuestions.scores2player==true){
             CreatePlayer.player1.scoreToHighScorePlayer1();
             CreatePlayer.player2.scoreToHighScorePlayer2();
             finalScore = (TextView) findViewById(R.id.finalscore);
             finalScore.setText(CreatePlayer.player1.getName() + "-" + CreatePlayer.player1.scoreToString() + "\n" +
                     CreatePlayer.player2.getName() + "-" + CreatePlayer.player2.scoreToString());
-            //finalScore.setVisibility(View.INVISIBLE);
+
         }
         else{
             CreatePlayer.player.scoreToHighScore();
             finalScore = (TextView) findViewById(R.id.finalscore);
             finalScore.setText(CreatePlayer.player.scoreToString());
-            //finalScore2.setVisibility(View.INVISIBLE);
+
         }
 
 

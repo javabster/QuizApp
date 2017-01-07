@@ -6,10 +6,12 @@ package am.app;
 
 public class QuestionsArray {
 
-    public static String[] Questions_Array = new String[10];                        //Creates a array of strings containing the questions{
+    //Creates a array of strings containing the questions, used for randomly generated questions section
+    public static String[] Questions_Array = new String[10];
 
     public static void Enter_String_Name(){
-        Questions_Array[0] = "What is the largest mammal on Earth? ";                               //Each question has an index
+        //Each question has an index, each string will be changed to "null" once the question has been attempted
+        Questions_Array[0] = "What is the largest mammal on Earth? ";
         Questions_Array[1] = "In what year did the Berlin Wall fall? ";
         Questions_Array[2] = "What is the capital of Canada? ";
         Questions_Array[3] = "What is the smallest country in the world? ";
@@ -21,7 +23,10 @@ public class QuestionsArray {
         Questions_Array[9] = "What colour is the Jubilee line on the London Underground?";
     }
 
+
+
     public static String getQuestion(int numberv){
+        //switch statement for displaying questions on any activity that uses them
         switch (numberv){
             case 0:
                 return "What is the largest mammal on Earth?";

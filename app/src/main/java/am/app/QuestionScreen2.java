@@ -48,8 +48,6 @@ public class QuestionScreen2 extends AppCompatActivity {
         // Each object on the screen is assigned to a variable which is to be used in the method
 
         TextView scoreview = (TextView) findViewById(R.id.Score2);
-        Button cheatButton = (Button) findViewById(R.id.CheatButton2);
-        Button skipButton = (Button) findViewById(R.id.SkipButton2);
         RadioButton A = (RadioButton) findViewById(R.id.radioButtonA2);
         RadioButton B = (RadioButton) findViewById(R.id.radioButtonB2);
         RadioButton C = (RadioButton) findViewById(R.id.radioButtonC2);
